@@ -1,0 +1,132 @@
+/* // The Diez web compiler creates shared styles for Sass and CSS. The styles
+// imported here can be found at `build/diez-dashboard-web/static/styles.scss`,
+// relative to the project root. */
+@import '~diez-dashboard/static/styles.css';
+
+:root {
+  --color-bg-primary: var(--palette-content-background);
+  --color-bg-secondary: #ffc402;
+  --color-bg-default: #fff;
+  --color-bg-inverse: #fff;
+
+  --color-text-primary: #fff;
+  --color-text-secondary: #755f17;
+  --color-text-default: #444;
+  --color-text-default-soft: #999;
+  --color-text-inverse: #444;
+  --color-text-inverse-soft: #999;
+
+  --font-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --font-weight-normal: 400;
+  --font-weight-display: 400;
+  --font-weight-btn: 600;
+
+  --rounded-btn: 0.25rem;
+}
+
+/*! purgecss start ignore */
+.theme-dark {
+  --color-bg-primary: var(--palette-text);
+  --color-bg-secondary: #dcd0c0;
+  --color-bg-default: #f4f4f4;
+  --color-bg-inverse: #373737;
+
+  --color-text-primary: #fff;
+  --color-text-secondary: #927e7e;
+  --color-text-default: #373737;
+  --color-text-default-soft: #6a6a6a;
+  --color-text-inverse: #fff;
+  --color-text-inverse-soft: #bbb;
+
+  --font-display: Georgia, Times, "Times New Roman", serif;
+  --font-body: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
+    "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana,
+    "Verdana Ref", sans-serif;
+
+  --font-weight-normal: 400;
+  --font-weight-display: 400;
+  --font-weight-btn: 600;
+
+  --rounded-btn: 0;
+}
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.masthead {
+ 
+  background-image: var(--images-masthead-3x);
+  background-size: var(--images-masthead-size);
+  height: 194px;
+}
+
+.mastheadContainer {
+  background-image: var(--palette-header-background);
+}
+
+
+.caption {
+  margin-top: var(--layout-values-spacing-small-px);
+}
+
+.body {
+  margin-top: var(--layout-values-spacing-medium-px);
+}
+
+.contentContainer {
+  flex-grow: 1;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  background-color: var(--palette-content-background);
+}
+
+.content {
+  width: 684px;
+  max-width: 100%;
+  flex-grow: 1;
+  flex-direction: column;
+  display: flex;
+}
+
+.innerContent {
+  flex-direction: column;
+  display: flex;
+  flex-grow: 1;
+  padding-top: var(--layout-values-spacing-large-px);
+  padding-right: var(--layout-values-spacing-medium-px);
+  padding-bottom: var(--layout-values-spacing-medium-px);
+  padding-left: var(--layout-values-spacing-medium-px);
+}
+
+.icon {
+  /* @include shadows-logo-filter(); */
+  transform: translate(0, -50%);
+  position: absolute;
+  margin-left: var(--layout-values-spacing-medium-px);
+}
+
+.animationContainer {
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 1.5;
+}
+
+.animation {
+  width: 174px;
+  height: 165px;
+}
+
+.footer {
+  margin-top: var(--layout-values-spacing-medium-px);
+}
