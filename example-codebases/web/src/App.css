@@ -22,15 +22,6 @@
   --color-orange: var(--palette-orange-color);
   --color-yellow: var(--palette-yellow-color);
   --color-green: var(--palette-green-color);
-
-  --font-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-  --font-weight-normal: 400;
-  --font-weight-display: 400;
-  --font-weight-btn: 600;
-
-  --rounded-btn: 0.25rem;
 }
 
 /*! purgecss start ignore */

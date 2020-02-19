@@ -5,7 +5,8 @@ function getTypeScale() {
 	let keys = Object.keys(ds.typography);
 	let types = {};
 	Object.values(ds.typography).forEach((type, index) => {
-		types[`.${keys[index]}`] = { ...type.style };
+		let fontStyle = `.${keys[index]}`.replace(".fontStyle", ".fontStyle-");
+		types[fontStyle] = { ...type.style };
 	});
 	return types;
 }
