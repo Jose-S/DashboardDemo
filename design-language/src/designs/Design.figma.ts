@@ -18,7 +18,7 @@ const designColors = {
     green3: Color.rgba(111, 207, 151, 1),
     tertiary: Color.rgba(7, 35, 100, 1),
     secondary: Color.rgba(43, 43, 144, 1),
-    primary: Color.rgba(69, 238, 177, 1),
+    primary: Color.rgba(69, 115, 238, 1),
     background: Color.rgba(240, 244, 255, 1),
     white: Color.rgba(255, 255, 255, 1),
     red: Color.rgba(235, 87, 87, 1),

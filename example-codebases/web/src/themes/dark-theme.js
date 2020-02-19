@@ -1,7 +1,7 @@
-import { createMuiTheme } from '@material-ui/core/styles';
-import green from '@material-ui/core/colors/green';
-import purple from '@material-ui/core/colors/purple';
-import resolveConfig from 'tailwindcss/resolveConfig';
+import { createMuiTheme } from "@material-ui/core/styles";
+import green from "@material-ui/core/colors/green";
+import purple from "@material-ui/core/colors/purple";
+import resolveConfig from "tailwindcss/resolveConfig";
 // import tailwindConfig from "../tailwind.config.js";
 
 // const fullConfig = resolveConfig(tailwindConfig);
@@ -14,57 +14,32 @@ const darkPurple = purple[900];
 
 function createDarkTheme(ds) {
 	if (ds !== undefined) {
-		console.log('DARK', ds.palette.caption.colorStyle);
 		const overridings = {
-			name: 'Dark Theme',
+			name: "Dark Theme",
 			palette: {
 				awesomeColors: {
-					primary: ds.palette.caption.color,
+					primary: primaryGreen,
 					secondary: accentPurple
 				},
 				primary: {
 					light: accentPurple,
 					main: primaryPurple,
 					dark: darkPurple,
-					contrastText: '#fff'
+					contrastText: "#fff"
 				},
-				type: 'dark',
+				type: "dark",
 				secondary: {
 					light: accentGreen,
-					main: ds.palette.caption.color,
+					main: primaryGreen,
 					dark: darkGreen,
-					contrastText: '#fff'
+					contrastText: "#fff"
 				}
 			}
 		};
-		console.log('DARK WITH DIEZ');
+
 		return createMuiTheme(overridings);
 	}
-
-	const overridings = {
-		name: 'Dark Theme',
-		palette: {
-			awesomeColors: {
-				primary: primaryPurple,
-				secondary: accentPurple
-			},
-			primary: {
-				light: accentPurple,
-				main: primaryPurple,
-				dark: darkPurple,
-				contrastText: '#fff'
-			},
-			type: 'dark',
-			secondary: {
-				light: accentGreen,
-				main: primaryGreen,
-				dark: darkGreen,
-				contrastText: '#fff'
-			}
-		}
-	};
-
-	return createMuiTheme(overridings);
+	return createMuiTheme({});
 }
 
 // export default createMuiTheme(overridings);

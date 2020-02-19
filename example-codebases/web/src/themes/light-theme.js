@@ -1,42 +1,73 @@
 import { createMuiTheme } from "@material-ui/core/styles";
-import green from "@material-ui/core/colors/green";
-import purple from "@material-ui/core/colors/purple";
-
-const primaryGreen = green[500];
-const accentGreen = green.A200;
-const darkGreen = green[900];
-const primaryPurple = purple[500];
-const accentPurple = purple.A200;
-const darkPurple = purple[900];
+import { Diez, DesignLanguage } from "diez-dashboard";
+// import resolveConfig from "tailwindcss/resolveConfig";
+// import tailwindConfig from "../tailwind.config.js";
+// const fullConfig = resolveConfig(tailwindConfig);
 
 function createLigthTheme(ds) {
+	// const ds = new Diez(DesignLanguage).component;
+
 	if (ds !== undefined) {
-		console.log("LIGTH", ds.palette.caption.colorStyle);
 		const overridings = {
 			name: "Light Theme",
 			palette: {
-				awesomeColors: {
-					primary: "#fe6b8b",
-					secondary: "#ff8e53"
-				},
 				pillColors: {
-					coop: "#2B2B90",
-					enrolled: "#27AE60",
-					dropout: "#EB5757",
-					leave: "#F2994A",
-					graduated: "#072364"
+					coop: ds.palette.primaryColor.color,
+					enrolled: ds.palette.greenColor.color,
+					dropout: ds.palette.redColor.color,
+					leave: ds.palette.orangeColor.color,
+					graduated: ds.palette.tertiaryColor.color
 				},
 				primary: {
-					light: accentGreen,
-					main: primaryGreen,
-					dark: darkGreen,
-					contrastText: "#fff"
+					main: ds.palette.primaryColor.color,
+					contrastText: ds.palette.textDarkContrast.color
 				},
 				secondary: {
-					light: accentPurple,
-					main: primaryPurple,
-					dark: darkPurple,
-					contrastText: "#fff"
+					main: ds.palette.secondaryColor.color,
+					contrastText: ds.palette.textDarkContrast.color
+				},
+				tertiary: {
+					main: ds.palette.tertiaryColor.color,
+					contrastText: ds.palette.textDarkContrast.color
+				},
+				error: {
+					main: ds.palette.redColor.color
+				},
+				warning: {
+					main: ds.palette.orangeColor.color
+				},
+				info: {
+					main: ds.palette.primaryColor.color
+				},
+				success: {
+					main: ds.palette.greenColor.color
+				},
+				text: {
+					primary: ds.palette.textPrimary.color,
+					secondary: ds.palette.textSecondary.color,
+					hint: ds.palette.textTertiary.color
+				},
+				background: {
+					paper: ds.palette.cardBackground.color,
+					default: ds.palette.background.color
+				}
+			},
+			typography: {
+				fontFamily: ds.strings.fontFamilies,
+				fontWeightSemiBold: 600,
+				h5: {
+					fontFamily: ds.typography.fontSize10.style.fontFamily,
+					fontWeight: ds.typography.fontSize10.style.fontWeight,
+					fontSize: ds.typography.fontSize10.style.fontSize,
+					lineHeight: ds.typography.fontSize10.style.lineHeight,
+					letterSpacing: ds.typography.fontSize10.style.letterSpacing
+				},
+				size4: {
+					fontFamily: ds.typography.fontSize4.style.fontFamily,
+					fontWeight: ds.typography.fontSize4.style.fontWeight,
+					fontSize: ds.typography.fontSize4.style.fontSize,
+					lineHeight: ds.typography.fontSize4.style.lineHeight,
+					letterSpacing: ds.typography.fontSize4.style.letterSpacing
 				}
 			}
 		};

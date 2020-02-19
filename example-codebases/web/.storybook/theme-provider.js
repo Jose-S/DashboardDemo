@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
-import CssBaseline from '@material-ui/core/CssBaseline';
-import { MuiThemeProvider } from '@material-ui/core/styles';
-import { StylesProvider } from '@material-ui/styles';
+import CssBaseline from "@material-ui/core/CssBaseline";
+import { MuiThemeProvider } from "@material-ui/core/styles";
+import { StylesProvider } from "@material-ui/styles";
 // import { Diez, DesignLanguage } from "diez-dashboard";
-import { ThemeProvider as StyledThemeProvider } from 'styled-components';
+import { ThemeProvider as StyledThemeProvider } from "styled-components";
 // import selectTheme from "../src/themes/selected-theme";
 
 const ThemeProvider = ({ theme, children }) => {
@@ -13,10 +13,10 @@ const ThemeProvider = ({ theme, children }) => {
 
 	console.log(nextTheme);
 	var d = document.documentElement;
-	if (nextTheme.name === 'Dark Theme') {
-		d.classList.add('theme-dark');
-	} else if (nextTheme.name === 'Light Theme') {
-		d.classList.remove('theme-dark');
+	if (nextTheme.name === "Dark Theme") {
+		d.classList.add("theme-dark");
+	} else if (nextTheme.name === "Light Theme") {
+		d.classList.remove("theme-dark");
 	}
 
 	// const diez = new Diez(DesignLanguage);
