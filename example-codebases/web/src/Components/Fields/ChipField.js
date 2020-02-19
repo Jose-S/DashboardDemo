@@ -6,7 +6,7 @@ import Chip from "@material-ui/core/Chip";
 // ${props => props.theme.typography.size4}
 const Pill = styled(Chip)`
 	
-   ${tw`rounded-lg capitalize w-28 fontSize-4 font-semibold `}
+   ${tw`rounded-lg capitalize w-28 fontSize4 font-bold `}
 	
    color: ${props => props.theme.palette.pillColors[props.label]};
    background-color: ${props =>

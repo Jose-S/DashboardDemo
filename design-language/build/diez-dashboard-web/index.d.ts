@@ -33,38 +33,23 @@ export declare class Color {
   outlineColorStyle: {outlineColor: string};
 }
 
-export declare class GradientStop {
-  position: number;
-  color: Color;
-}
-
-export declare class Point2D {
-  x: number;
-  y: number;
-}
-
-export declare class LinearGradient {
-  /**
-   * The CSS linear-gradient representation of the `LinearGradient`.
-   * @example
-   * linear-gradient(45deg, hsla(0, 0%, 100%, 1) 0%, hsla(0, 0%, 0%, 1) 100%)
-   */
-  linearGradient: string;
-  /**
-   * CSS declarations for the `background-image` CSS property.
-   */
-  backgroundImageStyle: {backgroundImage: string};
-  /**
-   * CSS declarations for the `background` CSS property.
-   */
-  backgroundStyle: {background: string};
-}
-
 export declare class Palette {
-  contentBackground: Color;
-  text: Color;
-  caption: Color;
-  headerBackground: LinearGradient;
+  background: Color;
+  cardBackground: Color;
+  textPrimary: Color;
+  textSecondary: Color;
+  textTertiary: Color;
+  textDarkContrast: Color;
+  textHighEmphasis: Color;
+  textLowEmphasis: Color;
+  primaryColor: Color;
+  primaryColorLigth: Color;
+  secondaryColor: Color;
+  tertiaryColor: Color;
+  redColor: Color;
+  orangeColor: Color;
+  yellowColor: Color;
+  greenColor: Color;
 }
 
 export declare class File {
@@ -114,45 +99,22 @@ declare global {
   }
 }
 
-export declare class Typography {
-  heading1: Typograph;
-  body: Typograph;
-  caption: Typograph;
-}
-
-export declare class Size2D {
-  /**
-   * The width of the size.
-   */
-  width: number;
-  /**
-   * The height of the size.
-   */
-  height: number;
-  /**
-   * CSS declarations for the `width` and `height` CSS properties.
-   */
-  style: {width: string, height: string};
-  /**
-   * CSS declarations for the `background-size` CSS property.
-   */
-  backgroundSizeStyle: {backgroundSize: string};
-}
-
-export declare class Image {
-  /**
-   * The URL of the `Image`
-   */
-  url: string;
-  /**
-   * CSS declarations for the `background-image` CSS property.
-   */
-  backgroundImageStyle: {backgroundImage: string};
+export declare class DesignTypography {
+  fontStyle10: Typograph;
+  fontStyle9: Typograph;
+  fontStyle8: Typograph;
+  fontStyle7: Typograph;
+  fontStyle4: Typograph;
+  fontStyle3: Typograph;
+  fontStyle2: Typograph;
+  fontStyle1: Typograph;
+  fontStyle12: Typograph;
+  fontStyle11: Typograph;
+  fontStyle6: Typograph;
+  fontStyle5: Typograph;
 }
 
 export declare class Images {
-  logo: Image;
-  masthead: Image;
 }
 
 export declare class Margin {
@@ -173,48 +135,15 @@ export declare class Strings {
   title: string;
   caption: string;
   helper: string;
-}
-
-export declare class DropShadow {
-  /**
-   * The CSS box-shadow representation of the `DropShadow`.
-   * @example
-   * 0px 1px 16px rgba(0, 0, 16, .4)
-   */
-  boxShadow: string;
-  /**
-   * The CSS text-shadow representation of the `DropShadow`.
-   * @example
-   * 0px 1px 16px rgba(0, 0, 16, .4)
-   */
-  textShadow: string;
-  /**
-   * The CSS filter representation of the `DropShadow`.
-   * @example
-   * drop-shadow(0px 1px 16px rgba(0, 0, 16, .4))
-   */
-  filter: string;
-  /**
-   * CSS declarations for the `box-shadow` CSS property.
-   */
-  boxShadowStyle: {boxShadow: string};
-  /**
-   * CSS declarations for the `text-shadow` CSS property.
-   */
-  textShadowStyle: {textShadow: string};
-  /**
-   * CSS declarations for the `filter` CSS property.
-   */
-  filterStyle: {filter: string};
+  fontFamilies: string;
 }
 
 export declare class Shadows {
-  logo: DropShadow;
 }
 
 export declare class DesignLanguage extends RootComponent {
   palette: Palette;
-  typography: Typography;
+  typography: DesignTypography;
   images: Images;
   layoutValues: LayoutValues;
   strings: Strings;

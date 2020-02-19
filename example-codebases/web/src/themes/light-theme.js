@@ -5,8 +5,8 @@ import { Diez, DesignLanguage } from "diez-dashboard";
 // const fullConfig = resolveConfig(tailwindConfig);
 
 function createLigthTheme(ds) {
+	// console.log(ds);
 	// const ds = new Diez(DesignLanguage).component;
-
 	if (ds !== undefined) {
 		const overridings = {
 			name: "Light Theme",
@@ -56,18 +56,18 @@ function createLigthTheme(ds) {
 				fontFamily: ds.strings.fontFamilies,
 				fontWeightSemiBold: 600,
 				h5: {
-					fontFamily: ds.typography.fontSize10.style.fontFamily,
-					fontWeight: ds.typography.fontSize10.style.fontWeight,
-					fontSize: ds.typography.fontSize10.style.fontSize,
-					lineHeight: ds.typography.fontSize10.style.lineHeight,
-					letterSpacing: ds.typography.fontSize10.style.letterSpacing
+					fontFamily: ds.typography.fontStyle10.style.fontFamily,
+					fontWeight: ds.typography.fontStyle10.style.fontWeight,
+					fontSize: ds.typography.fontStyle10.style.fontSize,
+					lineHeight: ds.typography.fontStyle10.style.lineHeight,
+					letterSpacing: ds.typography.fontStyle10.style.letterSpacing
 				},
 				size4: {
-					fontFamily: ds.typography.fontSize4.style.fontFamily,
-					fontWeight: ds.typography.fontSize4.style.fontWeight,
-					fontSize: ds.typography.fontSize4.style.fontSize,
-					lineHeight: ds.typography.fontSize4.style.lineHeight,
-					letterSpacing: ds.typography.fontSize4.style.letterSpacing
+					fontFamily: ds.typography.fontStyle4.style.fontFamily,
+					fontWeight: ds.typography.fontStyle4.style.fontWeight,
+					fontSize: ds.typography.fontStyle4.style.fontSize,
+					lineHeight: ds.typography.fontStyle4.style.lineHeight,
+					letterSpacing: ds.typography.fontStyle4.style.letterSpacing
 				}
 			}
 		};

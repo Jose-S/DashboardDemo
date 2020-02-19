@@ -58,18 +58,18 @@ export const designFonts = {
 };
 
 const designTypography = {
-    fontSize10: new Typograph({ fontSize: 48, color: Color.rgba(51, 51, 51, 1), font: designFonts.Montserrat.SemiBold }),
-    fontSize9: new Typograph({ fontSize: 36, color: Color.rgba(51, 51, 51, 1), font: designFonts.Montserrat.Bold }),
-    fontSize8: new Typograph({ fontSize: 32, color: Color.rgba(51, 51, 51, 1), font: designFonts.Inter.Medium }),
-    fontSize7: new Typograph({ fontSize: 24, color: Color.rgba(51, 51, 51, 1), font: designFonts.Inter.SemiBold }),
-    fontSize4: new Typograph({ fontSize: 16, color: Color.rgba(51, 51, 51, 1), font: designFonts.Inter.Regular }),
-    fontSize3: new Typograph({ fontSize: 14, color: Color.rgba(51, 51, 51, 1), font: designFonts.Inter.SemiBold }),
-    fontSize2: new Typograph({ fontSize: 12, color: Color.rgba(51, 51, 51, 1), font: designFonts.Inter.Medium }),
-    fontSize1: new Typograph({ fontSize: 10, color: Color.rgba(51, 51, 51, 1), font: designFonts.Inter.Regular }),
-    fontSize12: new Typograph({ fontSize: 96, color: Color.rgba(51, 51, 51, 1), font: designFonts.Montserrat.SemiBold }),
-    fontSize11: new Typograph({ fontSize: 64, color: Color.rgba(51, 51, 51, 1), font: designFonts.Montserrat.Bold }),
-    fontSize6: new Typograph({ fontSize: 20, color: Color.rgba(51, 51, 51, 1), font: designFonts.Inter.Medium }),
-    fontSize5: new Typograph({ fontSize: 18, color: Color.rgba(51, 51, 51, 1), font: designFonts.Inter.Bold })
+    fontStyle10: new Typograph({ fontSize: 48, color: Color.rgba(51, 51, 51, 1), font: designFonts.Montserrat.SemiBold }),
+    fontStyle9: new Typograph({ fontSize: 36, color: Color.rgba(51, 51, 51, 1), font: designFonts.Montserrat.Bold }),
+    fontStyle8: new Typograph({ fontSize: 32, color: Color.rgba(51, 51, 51, 1), font: designFonts.Inter.Medium }),
+    fontStyle7: new Typograph({ fontSize: 24, color: Color.rgba(51, 51, 51, 1), font: designFonts.Inter.SemiBold }),
+    fontStyle4: new Typograph({ fontSize: 16, color: Color.rgba(51, 51, 51, 1), font: designFonts.Inter.Regular }),
+    fontStyle3: new Typograph({ fontSize: 14, color: Color.rgba(51, 51, 51, 1), font: designFonts.Inter.SemiBold }),
+    fontStyle2: new Typograph({ fontSize: 12, color: Color.rgba(51, 51, 51, 1), font: designFonts.Inter.Medium }),
+    fontStyle1: new Typograph({ fontSize: 10, color: Color.rgba(51, 51, 51, 1), font: designFonts.Inter.Regular }),
+    fontStyle12: new Typograph({ fontSize: 96, color: Color.rgba(51, 51, 51, 1), font: designFonts.Montserrat.SemiBold }),
+    fontStyle11: new Typograph({ fontSize: 64, color: Color.rgba(51, 51, 51, 1), font: designFonts.Montserrat.Bold }),
+    fontStyle6: new Typograph({ fontSize: 20, color: Color.rgba(51, 51, 51, 1), font: designFonts.Inter.Medium }),
+    fontStyle5: new Typograph({ fontSize: 18, color: Color.rgba(51, 51, 51, 1), font: designFonts.Inter.Bold })
 };
 
 export const designComponentsFiles = {

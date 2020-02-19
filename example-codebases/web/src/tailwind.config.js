@@ -5,7 +5,7 @@ var diezz = new diez.Diez(diez.DesignLanguage);
 // console.log(diezz.component.palette.caption.color);
 // console.log(createDarkTheme(diezz.component));
 // var lightTheme = createLigthTheme(diezz.component.typography.fontSize4.style);
-console.log({ ...diezz.component.typography.fontSize4.style });
+// console.log({ ...diezz.component.typography.fontSize4.style });
 
 module.exports = {
 	theme: {
@@ -38,18 +38,5 @@ module.exports = {
 		}
 	},
 	variants: {},
-	plugins: [
-		plugin(function({ addUtilities }) {
-			const newUtilities = {
-				".fontSize-1": {
-					transform: "skewY(-10deg)"
-				},
-				".fontSize-4": {
-					...diezz.component.typography.fontSize4.style
-				}
-			};
-
-			addUtilities(newUtilities);
-		})
-	]
+	plugins: [require("./plugins/type-system")(["responsive"])]
 };

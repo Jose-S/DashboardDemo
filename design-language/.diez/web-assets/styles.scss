@@ -1,28 +1,56 @@
 @font-face {
-  font-family: "SourceSansPro-Regular";
+  font-family: "Montserrat-SemiBold";
   font-weight: 400;
   font-style: normal;
-  src: local("SourceSansPro-Regular"), url("http://10.110.107.173:8080/assets/SourceSansPro-Regular.ttf");
+  src: local("Montserrat-SemiBold"), url("http://10.150.100.107:8080/assets/Design.figma.contents/fonts/Montserrat-SemiBold.otf");
+}
+@font-face {
+  font-family: "Montserrat-Bold";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Montserrat-Bold"), url("http://10.150.100.107:8080/assets/Design.figma.contents/fonts/Montserrat-Bold.otf");
+}
+@font-face {
+  font-family: "Inter-Medium";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Inter-Medium"), url("http://10.150.100.107:8080/assets/Design.figma.contents/fonts/Inter-Medium.otf");
+}
+@font-face {
+  font-family: "Inter-SemiBold";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Inter-SemiBold"), url("http://10.150.100.107:8080/assets/Design.figma.contents/fonts/Inter-SemiBold.otf");
+}
+@font-face {
+  font-family: "Inter-Regular";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Inter-Regular"), url("http://10.150.100.107:8080/assets/Design.figma.contents/fonts/Inter-Regular.otf");
+}
+@font-face {
+  font-family: "Inter-Bold";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Inter-Bold"), url("http://10.150.100.107:8080/assets/Design.figma.contents/fonts/Inter-Bold.otf");
 }
 
-$palette-content-background: hsla(255.3488372093023, 66.15384615384616%, 12.745098039215685%, 1);
-$palette-text: hsla(240, 100%, 3.1372549019607843%, 1);
-$palette-caption: hsla(0, 78.72340425531912%, 63.13725490196078%, 1);
-$palette-header-background: linear-gradient(180deg, hsla(255.3488372093023, 66.15384615384616%, 12.745098039215685%, 1) 0%, hsla(240, 100%, 3.1372549019607843%, 1) 100%);
-$images-logo: url("http://10.110.107.173:8080/assets/logo.png");
-$images-logo-2x: url("http://10.110.107.173:8080/assets/logo@2x.png");
-$images-logo-3x: url("http://10.110.107.173:8080/assets/logo@3x.png");
-$images-logo-width: 52px;
-$images-logo-height: 48px;
-$images-logo-size: 52px 48px;
-$images-masthead: url("http://10.110.107.173:8080/assets/masthead.png");
-$images-masthead-2x: url("http://10.110.107.173:8080/assets/masthead@2x.png");
-$images-masthead-3x: url("http://10.110.107.173:8080/assets/masthead@3x.png");
-$images-masthead-width: 208px;
-$images-masthead-height: 88px;
-$images-masthead-size: 208px 88px;
-$shadows-logo: 0px 1px 16px hsla(240, 100%, 3.1372549019607843%, 0.41000000000000003);
-$shadows-logo-filter: drop-shadow(0px 1px 8px hsla(240, 100%, 3.1372549019607843%, 0.41000000000000003));
+$palette-background: hsla(223.99999999999997, 100%, 97.05882352941177%, 1);
+$palette-card-background: hsla(0, 0%, 100%, 1);
+$palette-text-primary: hsla(0, 0%, 20%, 1);
+$palette-text-secondary: hsla(0, 0%, 50.98039215686274%, 1);
+$palette-text-tertiary: hsla(0, 0%, 74.11764705882354%, 1);
+$palette-text-dark-contrast: hsla(0, 0%, 100%, 1);
+$palette-text-high-emphasis: hsla(223.66863905325442, 83.25123152709361%, 60.19607843137255%, 1);
+$palette-text-low-emphasis: hsla(240, 54.010695187165766%, 36.66666666666667%, 1);
+$palette-primary-color: hsla(223.66863905325442, 83.25123152709361%, 60.19607843137255%, 1);
+$palette-primary-color-ligth: hsla(223.99999999999997, 100%, 97.05882352941177%, 1);
+$palette-secondary-color: hsla(240, 54.010695187165766%, 36.66666666666667%, 1);
+$palette-tertiary-color: hsla(221.93548387096772, 86.91588785046729%, 20.980392156862745%, 1);
+$palette-red-color: hsla(0, 78.72340425531912%, 63.13725490196078%, 1);
+$palette-orange-color: hsla(28.214285714285715, 86.59793814432989%, 61.96078431372549%, 1);
+$palette-yellow-color: hsla(45.18072289156627, 86.45833333333333%, 62.35294117647059%, 1);
+$palette-green-color: hsla(145.33333333333331, 63.38028169014084%, 41.76470588235294%, 1);
 $margin-top: 40;
 $margin-top-px: 40px;
 $margin-top-pt: 40pt;
@@ -43,129 +71,283 @@ $margin-right-px: 10px;
 $margin-right-pt: 10pt;
 $margin-right-em: 10em;
 $margin-right-rem: 10rem;
-$layout-values-spacing-small: 5;
-$layout-values-spacing-small-px: 5px;
-$layout-values-spacing-small-pt: 5pt;
-$layout-values-spacing-small-em: 5em;
-$layout-values-spacing-small-rem: 5rem;
-$layout-values-spacing-medium: 25;
-$layout-values-spacing-medium-px: 25px;
-$layout-values-spacing-medium-pt: 25pt;
-$layout-values-spacing-medium-em: 25em;
-$layout-values-spacing-medium-rem: 25rem;
-$layout-values-spacing-large: 40;
-$layout-values-spacing-large-px: 40px;
-$layout-values-spacing-large-pt: 40pt;
-$layout-values-spacing-large-em: 40em;
-$layout-values-spacing-large-rem: 40rem;
+$layout-values-spacing-small: 8;
+$layout-values-spacing-small-px: 8px;
+$layout-values-spacing-small-pt: 8pt;
+$layout-values-spacing-small-em: 8em;
+$layout-values-spacing-small-rem: 8rem;
+$layout-values-spacing-medium: 32;
+$layout-values-spacing-medium-px: 32px;
+$layout-values-spacing-medium-pt: 32pt;
+$layout-values-spacing-medium-em: 32em;
+$layout-values-spacing-medium-rem: 32rem;
+$layout-values-spacing-large: 64;
+$layout-values-spacing-large-px: 64px;
+$layout-values-spacing-large-pt: 64pt;
+$layout-values-spacing-large-em: 64em;
+$layout-values-spacing-large-rem: 64rem;
 $strings-title: "Diez";
 $strings-caption: "Keep your designs in sync with code";
 $strings-helper: "Please Modify the contents of “src/DesignLanguage.ts”.";
+$strings-font-families: "'Montserrat-SemiBold', 'Montserrat-Bold', 'Inter-Medium', 'Inter-SemiBold', 'Inter-Regular', 'Inter-Bold', sans-serif";
 
-@mixin palette-content-background-background-color {
-  background-color: hsla(255.3488372093023, 66.15384615384616%, 12.745098039215685%, 1);
+@mixin palette-background-background-color {
+  background-color: hsla(223.99999999999997, 100%, 97.05882352941177%, 1);
 }
 
-@mixin palette-content-background-color {
-  color: hsla(255.3488372093023, 66.15384615384616%, 12.745098039215685%, 1);
+@mixin palette-background-color {
+  color: hsla(223.99999999999997, 100%, 97.05882352941177%, 1);
 }
 
-@mixin palette-text-background-color {
-  background-color: hsla(240, 100%, 3.1372549019607843%, 1);
+@mixin palette-card-background-background-color {
+  background-color: hsla(0, 0%, 100%, 1);
 }
 
-@mixin palette-text-color {
-  color: hsla(240, 100%, 3.1372549019607843%, 1);
+@mixin palette-card-background-color {
+  color: hsla(0, 0%, 100%, 1);
 }
 
-@mixin palette-caption-background-color {
+@mixin palette-text-primary-background-color {
+  background-color: hsla(0, 0%, 20%, 1);
+}
+
+@mixin palette-text-primary-color {
+  color: hsla(0, 0%, 20%, 1);
+}
+
+@mixin palette-text-secondary-background-color {
+  background-color: hsla(0, 0%, 50.98039215686274%, 1);
+}
+
+@mixin palette-text-secondary-color {
+  color: hsla(0, 0%, 50.98039215686274%, 1);
+}
+
+@mixin palette-text-tertiary-background-color {
+  background-color: hsla(0, 0%, 74.11764705882354%, 1);
+}
+
+@mixin palette-text-tertiary-color {
+  color: hsla(0, 0%, 74.11764705882354%, 1);
+}
+
+@mixin palette-text-dark-contrast-background-color {
+  background-color: hsla(0, 0%, 100%, 1);
+}
+
+@mixin palette-text-dark-contrast-color {
+  color: hsla(0, 0%, 100%, 1);
+}
+
+@mixin palette-text-high-emphasis-background-color {
+  background-color: hsla(223.66863905325442, 83.25123152709361%, 60.19607843137255%, 1);
+}
+
+@mixin palette-text-high-emphasis-color {
+  color: hsla(223.66863905325442, 83.25123152709361%, 60.19607843137255%, 1);
+}
+
+@mixin palette-text-low-emphasis-background-color {
+  background-color: hsla(240, 54.010695187165766%, 36.66666666666667%, 1);
+}
+
+@mixin palette-text-low-emphasis-color {
+  color: hsla(240, 54.010695187165766%, 36.66666666666667%, 1);
+}
+
+@mixin palette-primary-color-background-color {
+  background-color: hsla(223.66863905325442, 83.25123152709361%, 60.19607843137255%, 1);
+}
+
+@mixin palette-primary-color-color {
+  color: hsla(223.66863905325442, 83.25123152709361%, 60.19607843137255%, 1);
+}
+
+@mixin palette-primary-color-ligth-background-color {
+  background-color: hsla(223.99999999999997, 100%, 97.05882352941177%, 1);
+}
+
+@mixin palette-primary-color-ligth-color {
+  color: hsla(223.99999999999997, 100%, 97.05882352941177%, 1);
+}
+
+@mixin palette-secondary-color-background-color {
+  background-color: hsla(240, 54.010695187165766%, 36.66666666666667%, 1);
+}
+
+@mixin palette-secondary-color-color {
+  color: hsla(240, 54.010695187165766%, 36.66666666666667%, 1);
+}
+
+@mixin palette-tertiary-color-background-color {
+  background-color: hsla(221.93548387096772, 86.91588785046729%, 20.980392156862745%, 1);
+}
+
+@mixin palette-tertiary-color-color {
+  color: hsla(221.93548387096772, 86.91588785046729%, 20.980392156862745%, 1);
+}
+
+@mixin palette-red-color-background-color {
   background-color: hsla(0, 78.72340425531912%, 63.13725490196078%, 1);
 }
 
-@mixin palette-caption-color {
+@mixin palette-red-color-color {
   color: hsla(0, 78.72340425531912%, 63.13725490196078%, 1);
 }
 
-@mixin palette-header-background-background {
-  background: linear-gradient(180deg, hsla(255.3488372093023, 66.15384615384616%, 12.745098039215685%, 1) 0%, hsla(240, 100%, 3.1372549019607843%, 1) 100%);
+@mixin palette-orange-color-background-color {
+  background-color: hsla(28.214285714285715, 86.59793814432989%, 61.96078431372549%, 1);
 }
 
-@mixin palette-header-background-background-image {
-  background-image: linear-gradient(180deg, hsla(255.3488372093023, 66.15384615384616%, 12.745098039215685%, 1) 0%, hsla(240, 100%, 3.1372549019607843%, 1) 100%);
+@mixin palette-orange-color-color {
+  color: hsla(28.214285714285715, 86.59793814432989%, 61.96078431372549%, 1);
 }
 
-@mixin typography-heading1 {
-  font-family: "SourceSansPro-Regular",sans-serif;
+@mixin palette-yellow-color-background-color {
+  background-color: hsla(45.18072289156627, 86.45833333333333%, 62.35294117647059%, 1);
+}
+
+@mixin palette-yellow-color-color {
+  color: hsla(45.18072289156627, 86.45833333333333%, 62.35294117647059%, 1);
+}
+
+@mixin palette-green-color-background-color {
+  background-color: hsla(145.33333333333331, 63.38028169014084%, 41.76470588235294%, 1);
+}
+
+@mixin palette-green-color-color {
+  color: hsla(145.33333333333331, 63.38028169014084%, 41.76470588235294%, 1);
+}
+
+@mixin design-typography-font-style10 {
+  font-family: "Montserrat-SemiBold",sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 64px;
-  color: hsla(240, 100%, 3.1372549019607843%, 1);
+  font-size: 48px;
+  color: hsla(0, 0%, 20%, 1);
   letter-spacing: 0px;
   text-align: start;
   text-decoration: none;
 }
 
-@mixin typography-body {
-  font-family: "SourceSansPro-Regular",sans-serif;
+@mixin design-typography-font-style9 {
+  font-family: "Montserrat-Bold",sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 18px;
-  color: hsla(240, 100%, 3.1372549019607843%, 1);
+  font-size: 36px;
+  color: hsla(0, 0%, 20%, 1);
   letter-spacing: 0px;
-  text-align: center;
+  text-align: start;
   text-decoration: none;
 }
 
-@mixin typography-caption {
-  font-family: "SourceSansPro-Regular",sans-serif;
+@mixin design-typography-font-style8 {
+  font-family: "Inter-Medium",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 32px;
+  color: hsla(0, 0%, 20%, 1);
+  letter-spacing: 0px;
+  text-align: start;
+  text-decoration: none;
+}
+
+@mixin design-typography-font-style7 {
+  font-family: "Inter-SemiBold",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  color: hsla(0, 0%, 20%, 1);
+  letter-spacing: 0px;
+  text-align: start;
+  text-decoration: none;
+}
+
+@mixin design-typography-font-style4 {
+  font-family: "Inter-Regular",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  color: hsla(0, 0%, 20%, 1);
+  letter-spacing: 0px;
+  text-align: start;
+  text-decoration: none;
+}
+
+@mixin design-typography-font-style3 {
+  font-family: "Inter-SemiBold",sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 14px;
-  color: hsla(0, 78.72340425531912%, 63.13725490196078%, 1);
+  color: hsla(0, 0%, 20%, 1);
   letter-spacing: 0px;
   text-align: start;
   text-decoration: none;
 }
 
-@mixin images-logo-background-image {
-  background-image: url("http://10.110.107.173:8080/assets/logo.png");
-  width: 52px;
-  height: 48px;
-  background-size: 52px 48px;
-
-  @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-    background-image: url("http://10.110.107.173:8080/assets/logo@2x.png");
-  }
-
-  @media (min-device-pixel-ratio: 3), (min-resolution: 3dppx) {
-    background-image: url("http://10.110.107.173:8080/assets/logo@3x.png");
-  }
+@mixin design-typography-font-style2 {
+  font-family: "Inter-Medium",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  color: hsla(0, 0%, 20%, 1);
+  letter-spacing: 0px;
+  text-align: start;
+  text-decoration: none;
 }
 
-@mixin images-masthead-background-image {
-  background-image: url("http://10.110.107.173:8080/assets/masthead.png");
-  width: 208px;
-  height: 88px;
-  background-size: 208px 88px;
-
-  @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-    background-image: url("http://10.110.107.173:8080/assets/masthead@2x.png");
-  }
-
-  @media (min-device-pixel-ratio: 3), (min-resolution: 3dppx) {
-    background-image: url("http://10.110.107.173:8080/assets/masthead@3x.png");
-  }
+@mixin design-typography-font-style1 {
+  font-family: "Inter-Regular",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10px;
+  color: hsla(0, 0%, 20%, 1);
+  letter-spacing: 0px;
+  text-align: start;
+  text-decoration: none;
 }
 
-@mixin shadows-logo-box-shadow {
-  box-shadow: 0px 1px 16px hsla(240, 100%, 3.1372549019607843%, 0.41000000000000003);
+@mixin design-typography-font-style12 {
+  font-family: "Montserrat-SemiBold",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 96px;
+  color: hsla(0, 0%, 20%, 1);
+  letter-spacing: 0px;
+  text-align: start;
+  text-decoration: none;
 }
 
-@mixin shadows-logo-text-shadow {
-  text-shadow: 0px 1px 16px hsla(240, 100%, 3.1372549019607843%, 0.41000000000000003);
+@mixin design-typography-font-style11 {
+  font-family: "Montserrat-Bold",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 64px;
+  color: hsla(0, 0%, 20%, 1);
+  letter-spacing: 0px;
+  text-align: start;
+  text-decoration: none;
 }
 
-@mixin shadows-logo-filter {
-  filter: drop-shadow(0px 1px 8px hsla(240, 100%, 3.1372549019607843%, 0.41000000000000003));
+@mixin design-typography-font-style6 {
+  font-family: "Inter-Medium",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  color: hsla(0, 0%, 20%, 1);
+  letter-spacing: 0px;
+  text-align: start;
+  text-decoration: none;
+}
+
+@mixin design-typography-font-style5 {
+  font-family: "Inter-Bold",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  color: hsla(0, 0%, 20%, 1);
+  letter-spacing: 0px;
+  text-align: start;
+  text-decoration: none;
 }
 

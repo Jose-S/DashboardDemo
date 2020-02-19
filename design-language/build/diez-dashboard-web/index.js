@@ -151,117 +151,43 @@ Object.defineProperties(Color.prototype, {
 });
 
 /**
-Provides a gradient stop.
-*/
-class GradientStop {
-  constructor({
-    position,
-    color
-  }) {
-  /**
-  GradientStop data.
-  */
-    this.position = position;
-    /**
-    GradientStop data.
-    **/
-    this.color = new Color(color);
-  }
-}
-
-
-module.exports.GradientStop = GradientStop;
-
-/**
-Provides a two dimensional point.
-
-Taken alone, points are designated in an abstract space with no inherit dimensions or directionality. In the
-context of other prefabs like [[LinearGradient]], points typically should use the standard two dimensional graphics
-space, often normalized in the unit square, where x increases from left to right and y increases from top to bottom.
-
-Usage: `point = Point2D.make(0.5, 0.5);`.
-*/
-class Point2D {
-  constructor({
-    x,
-    y
-  }) {
-  /**
-  Point data.
-  */
-    this.x = x;
-  /**
-  Point data.
-  */
-    this.y = y;
-  }
-}
-
-
-module.exports.Point2D = Point2D;
-
-/**
-Provides a linear gradient.
-*/
-class LinearGradient {
-  constructor({
-    stops,
-    start,
-    end
-  }) {
-    this.stops = stops.map((value1) => new GradientStop(value1));
-    /**
-    LinearGradient data.
-    **/
-    this.start = new Point2D(start);
-    /**
-    LinearGradient data.
-    **/
-    this.end = new Point2D(end);
-  }
-}
-
-
-module.exports.LinearGradient = LinearGradient;
-
-const {linearGradientToCss} = require('@diez/web-sdk-common');
-
-Object.defineProperties(LinearGradient.prototype, {
-  linearGradient: {
-    get () {
-      return linearGradientToCss(this);
-    },
-  },
-  backgroundImageStyle: {
-    get () {
-      return {
-        backgroundImage: this.linearGradient,
-      };
-    },
-  },
-  backgroundStyle: {
-    get () {
-      return {
-        background: this.linearGradient,
-      };
-    },
-  },
-});
-
-/**
 You can reference properties from other components.
 */
 class Palette {
   constructor({
-    contentBackground = {h: 0.7093023255813953, s: 0.6615384615384616, l: 0.12745098039215685, a: 1},
-    text = {h: 0.6666666666666666, s: 1, l: 0.03137254901960784, a: 1},
-    caption = {h: 0.4045584045584045, s: 0.639344262295082, l: 0.3588235294117647, a: 1},
-    headerBackground = {stops: [{position: 0, color: {h: 0.7093023255813953, s: 0.6615384615384616, l: 0.12745098039215685, a: 1}}, {position: 1, color: {h: 0.6666666666666666, s: 1, l: 0.03137254901960784, a: 1}}], start: {x: 0.5, y: 0}, end: {x: 0.5, y: 1}}
+    background = {h: 0.6222222222222221, s: 1, l: 0.9705882352941176, a: 1},
+    cardBackground = {h: 0, s: 0, l: 1, a: 1},
+    textPrimary = {h: 0, s: 0, l: 0.2, a: 1},
+    textSecondary = {h: 0, s: 0, l: 0.5098039215686274, a: 1},
+    textTertiary = {h: 0, s: 0, l: 0.7411764705882353, a: 1},
+    textDarkContrast = {h: 0, s: 0, l: 1, a: 1},
+    textHighEmphasis = {h: 0.621301775147929, s: 0.832512315270936, l: 0.6019607843137255, a: 1},
+    textLowEmphasis = {h: 0.6666666666666666, s: 0.5401069518716577, l: 0.3666666666666667, a: 1},
+    primaryColor = {h: 0.621301775147929, s: 0.832512315270936, l: 0.6019607843137255, a: 1},
+    primaryColorLigth = {h: 0.6222222222222221, s: 1, l: 0.9705882352941176, a: 1},
+    secondaryColor = {h: 0.6666666666666666, s: 0.5401069518716577, l: 0.3666666666666667, a: 1},
+    tertiaryColor = {h: 0.6164874551971326, s: 0.8691588785046729, l: 0.20980392156862746, a: 1},
+    redColor = {h: 0, s: 0.7872340425531912, l: 0.6313725490196078, a: 1},
+    orangeColor = {h: 0.07837301587301587, s: 0.8659793814432989, l: 0.6196078431372549, a: 1},
+    yellowColor = {h: 0.12550200803212852, s: 0.8645833333333333, l: 0.6235294117647059, a: 1},
+    greenColor = {h: 0.4037037037037037, s: 0.6338028169014084, l: 0.4176470588235294, a: 1}
   } = {}) {
-    this.contentBackground = new Color(contentBackground);
-    this.text = new Color(text);
-    this.caption = new Color(caption);
-    this.headerBackground = new LinearGradient(headerBackground);
+    this.background = new Color(background);
+    this.cardBackground = new Color(cardBackground);
+    this.textPrimary = new Color(textPrimary);
+    this.textSecondary = new Color(textSecondary);
+    this.textTertiary = new Color(textTertiary);
+    this.textDarkContrast = new Color(textDarkContrast);
+    this.textHighEmphasis = new Color(textHighEmphasis);
+    this.textLowEmphasis = new Color(textLowEmphasis);
+    this.primaryColor = new Color(primaryColor);
+    this.primaryColorLigth = new Color(primaryColorLigth);
+    this.secondaryColor = new Color(secondaryColor);
+    this.tertiaryColor = new Color(tertiaryColor);
+    this.redColor = new Color(redColor);
+    this.orangeColor = new Color(orangeColor);
+    this.yellowColor = new Color(yellowColor);
+    this.greenColor = new Color(greenColor);
   }
 }
 
@@ -462,138 +388,46 @@ diezHTMLExtensions.push(() => {
   };
 });
 
+class DesignTypography {
+  constructor({
+    fontStyle10 = {font: {file: {src: "assets/Design.figma.contents/fonts/Montserrat-SemiBold.otf", type: "font"}, name: "Montserrat-SemiBold", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 48, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
+    fontStyle9 = {font: {file: {src: "assets/Design.figma.contents/fonts/Montserrat-Bold.otf", type: "font"}, name: "Montserrat-Bold", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 36, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
+    fontStyle8 = {font: {file: {src: "assets/Design.figma.contents/fonts/Inter-Medium.otf", type: "font"}, name: "Inter-Medium", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 32, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
+    fontStyle7 = {font: {file: {src: "assets/Design.figma.contents/fonts/Inter-SemiBold.otf", type: "font"}, name: "Inter-SemiBold", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 24, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
+    fontStyle4 = {font: {file: {src: "assets/Design.figma.contents/fonts/Inter-Regular.otf", type: "font"}, name: "Inter-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 16, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
+    fontStyle3 = {font: {file: {src: "assets/Design.figma.contents/fonts/Inter-SemiBold.otf", type: "font"}, name: "Inter-SemiBold", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 14, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
+    fontStyle2 = {font: {file: {src: "assets/Design.figma.contents/fonts/Inter-Medium.otf", type: "font"}, name: "Inter-Medium", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 12, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
+    fontStyle1 = {font: {file: {src: "assets/Design.figma.contents/fonts/Inter-Regular.otf", type: "font"}, name: "Inter-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 10, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
+    fontStyle12 = {font: {file: {src: "assets/Design.figma.contents/fonts/Montserrat-SemiBold.otf", type: "font"}, name: "Montserrat-SemiBold", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 96, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
+    fontStyle11 = {font: {file: {src: "assets/Design.figma.contents/fonts/Montserrat-Bold.otf", type: "font"}, name: "Montserrat-Bold", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 64, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
+    fontStyle6 = {font: {file: {src: "assets/Design.figma.contents/fonts/Inter-Medium.otf", type: "font"}, name: "Inter-Medium", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 20, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
+    fontStyle5 = {font: {file: {src: "assets/Design.figma.contents/fonts/Inter-Bold.otf", type: "font"}, name: "Inter-Bold", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 18, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []}
+  } = {}) {
+    this.fontStyle10 = new Typograph(fontStyle10);
+    this.fontStyle9 = new Typograph(fontStyle9);
+    this.fontStyle8 = new Typograph(fontStyle8);
+    this.fontStyle7 = new Typograph(fontStyle7);
+    this.fontStyle4 = new Typograph(fontStyle4);
+    this.fontStyle3 = new Typograph(fontStyle3);
+    this.fontStyle2 = new Typograph(fontStyle2);
+    this.fontStyle1 = new Typograph(fontStyle1);
+    this.fontStyle12 = new Typograph(fontStyle12);
+    this.fontStyle11 = new Typograph(fontStyle11);
+    this.fontStyle6 = new Typograph(fontStyle6);
+    this.fontStyle5 = new Typograph(fontStyle5);
+  }
+}
+
+
+module.exports.DesignTypography = DesignTypography;
+
 /**
 Typographs encapsulate type styles with support for a specific font, font size,
 and color. More typograph properties are coming soon.
 */
-class Typography {
-  constructor({
-    heading1 = {font: {file: {src: "assets/SourceSansPro-Regular.ttf", type: "font"}, name: "SourceSansPro-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 64, color: {h: 0.6666666666666666, s: 1, l: 0.03137254901960784, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
-    body = {font: {file: {src: "assets/SourceSansPro-Regular.ttf", type: "font"}, name: "SourceSansPro-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 18, color: {h: 0.6666666666666666, s: 1, l: 0.03137254901960784, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "center", decoration: []},
-    caption = {font: {file: {src: "assets/SourceSansPro-Regular.ttf", type: "font"}, name: "SourceSansPro-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 14, color: {h: 0.4045584045584045, s: 0.639344262295082, l: 0.3588235294117647, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []}
-  } = {}) {
-    this.heading1 = new Typograph(heading1);
-    this.body = new Typograph(body);
-    this.caption = new Typograph(caption);
-  }
-}
-
-
-module.exports.Typography = Typography;
-
-/**
-Provides a two dimensional size.
-
-Usage: `size = Size2D.make(1920, 1080);`.
-*/
-class Size2D {
-  constructor({
-    width,
-    height
-  }) {
-  /**
-  Size data.
-  */
-    this.width = width;
-  /**
-  Size data.
-  */
-    this.height = height;
-  }
-}
-
-
-module.exports.Size2D = Size2D;
-
-Object.defineProperties(Size2D.prototype, {
-  style: {
-    get () {
-      return {
-        width: `${this.width}px`,
-        height: `${this.height}px`,
-      };
-    },
-  },
-  backgroundSizeStyle: {
-    get () {
-      return {
-        backgroundSize: `${this.style.width} ${this.style.height}`,
-      };
-    },
-  },
-});
-
-/**
-Provides an abstraction for raster images. With bindings, this component can embed images in multiple platforms in
-accordance with best practices. Images should provide pixel ratios for standard, @2x, @3x, and @4x with conventional
-file naming. The availability of retina resolutions is expected to be a compile-time concern, and the "src" of the
-image is expected to exist and provide an image with the specified dimensions.
-*/
-class Image {
-  constructor({
-    file,
-    file2x,
-    file3x,
-    size
-  }) {
-    /**
-    Responsive image data.
-    **/
-    this.file = new File(file);
-    /**
-    Responsive image data.
-    **/
-    this.file2x = new File(file2x);
-    /**
-    Responsive image data.
-    **/
-    this.file3x = new File(file3x);
-    /**
-    Responsive image data.
-    **/
-    this.size = new Size2D(size);
-  }
-}
-
-
-module.exports.Image = Image;
-
-Object.defineProperties(Image.prototype, {
-  url: {
-    get () {
-      switch (Math.ceil(window.devicePixelRatio)) {
-        case 1:
-          return this.file.url;
-        case 2:
-          return this.file2x.url;
-        case 3:
-          return this.file3x.url;
-        default:
-          return this.file2x.url;
-      }
-    },
-  },
-  backgroundImageStyle: {
-    get () {
-      return {
-        backgroundImage: `url("${this.url}")`,
-      };
-    },
-  },
-});
-
-/**
-In addition to colors and typography, you can also collect other types of
-design language primitives in components as well — such as images, icons &
-animations.
-*/
 class Images {
   constructor({
-    logo = {file: {src: "assets/logo.png", type: "image"}, file2x: {src: "assets/logo@2x.png", type: "image"}, file3x: {src: "assets/logo@3x.png", type: "image"}, size: {width: 52, height: 48}},
-    masthead = {file: {src: "assets/masthead.png", type: "image"}, file2x: {src: "assets/masthead@2x.png", type: "image"}, file3x: {src: "assets/masthead@3x.png", type: "image"}, size: {width: 208, height: 88}}
   } = {}) {
-    this.logo = new Image(logo);
-    this.masthead = new Image(masthead);
   }
 }
 
@@ -641,9 +475,9 @@ You can even collect your own custom components.
 */
 class LayoutValues {
   constructor({
-    spacingSmall = 5,
-    spacingMedium = 25,
-    spacingLarge = 40,
+    spacingSmall = 8,
+    spacingMedium = 32,
+    spacingLarge = 64,
     contentMargin = {top: 40, bottom: 10, left: 10, right: 10}
   } = {}) {
     this.spacingSmall = spacingSmall;
@@ -663,90 +497,22 @@ class Strings {
   constructor({
     title = "Diez",
     caption = "Keep your designs in sync with code",
-    helper = "Please Modify the contents of “src/DesignLanguage.ts”."
+    helper = "Please Modify the contents of “src/DesignLanguage.ts”.",
+    fontFamilies = "'Montserrat-SemiBold', 'Montserrat-Bold', 'Inter-Medium', 'Inter-SemiBold', 'Inter-Regular', 'Inter-Bold', sans-serif"
   } = {}) {
     this.title = title;
     this.caption = caption;
     this.helper = helper;
+    this.fontFamilies = fontFamilies;
   }
 }
 
 
 module.exports.Strings = Strings;
 
-/**
-Provides a drop shadow.
-*/
-class DropShadow {
-  constructor({
-    offset,
-    radius,
-    color
-  }) {
-    /**
-    DropShadow data.
-    **/
-    this.offset = new Point2D(offset);
-  /**
-  DropShadow data.
-  */
-    this.radius = radius;
-    /**
-    DropShadow data.
-    **/
-    this.color = new Color(color);
-  }
-}
-
-
-module.exports.DropShadow = DropShadow;
-
-const {dropShadowToCss, dropShadowToFilterCss} = require('@diez/web-sdk-common');
-
-Object.defineProperties(DropShadow.prototype, {
-  boxShadow: {
-    get () {
-      return dropShadowToCss(this);
-    },
-  },
-  textShadow: {
-    get () {
-      return dropShadowToCss(this);
-    },
-  },
-  filter: {
-    get () {
-      return dropShadowToFilterCss(this);
-    },
-  },
-  boxShadowStyle: {
-    get () {
-      return {
-        boxShadow: this.boxShadow,
-      };
-    },
-  },
-  textShadowStyle: {
-    get () {
-      return {
-        textShadow: this.textShadow,
-      };
-    },
-  },
-  filterStyle: {
-    get () {
-      return {
-        filter: this.filter,
-      };
-    },
-  },
-});
-
 class Shadows {
   constructor({
-    logo = {offset: {x: 0, y: 1}, radius: 16, color: {h: 0.6666666666666666, s: 1, l: 0.03137254901960784, a: 0.41000000000000003}}
   } = {}) {
-    this.logo = new DropShadow(logo);
   }
 }
 
@@ -778,7 +544,7 @@ class DesignLanguage {
     shadows = {}
   } = {}) {
     this.palette = new Palette(palette);
-    this.typography = new Typography(typography);
+    this.typography = new DesignTypography(typography);
     this.images = new Images(images);
     this.layoutValues = new LayoutValues(layoutValues);
     this.strings = new Strings(strings);
