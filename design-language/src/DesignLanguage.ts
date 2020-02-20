@@ -24,15 +24,15 @@ const colors = {
 	gray5: designTokens.colors.gray5,
 	gray6: designTokens.colors.gray6,
 	red: designTokens.colors.red,
-	orange:designTokens.colors.orange,
-	yellow:designTokens.colors.yellow,
-	green1:designTokens.colors.green1,
-	green2:designTokens.colors.green2,
-	green3:designTokens.colors.green3,
-	primary:designTokens.colors.primary,
-	secondary:designTokens.colors.secondary,
-	tertiary:designTokens.colors.tertiary,
-	primaryLigth:designTokens.colors.background,
+	orange: designTokens.colors.orange,
+	yellow: designTokens.colors.yellow,
+	green1: designTokens.colors.green1,
+	green2: designTokens.colors.green2,
+	green3: designTokens.colors.green3,
+	primary: designTokens.colors.primary,
+	secondary: designTokens.colors.secondary,
+	tertiary: designTokens.colors.tertiary,
+	primaryLigth: designTokens.colors.background
 };
 
 /**
@@ -42,7 +42,7 @@ const palette = {
 	// Backgrounds
 	background: colors.primaryLigth,
 	cardBackground: colors.white,
-	
+
 	// Text
 	textPrimary: colors.black,
 	textSecondary: colors.gray3,
@@ -59,14 +59,14 @@ const palette = {
 	redColor: colors.red,
 	orangeColor: colors.orange,
 	yellowColor: colors.yellow,
-	greenColor: colors.green2,
+	greenColor: colors.green2
 };
 
 /**
  * All of rich language features of TypeScript are at your disposal; for example,
  * you can define an object to keep track of your fonts.
  */
-const Fonts = {...designFonts};
+const Fonts = { ...designFonts };
 
 /**
  * Typographs encapsulate type styles with support for a specific font, font size,
@@ -99,15 +99,15 @@ const layoutValues = {
 	})
 };
 
-
-function getFontFamilies(){
-	let fonts = new Set()
+function getFontFamilies() {
+	let fonts = new Set();
 	// Add all fonts
-	Object.values(designFonts).forEach((val) =>
-	Object.values(val).forEach((val => fonts.add(val.name))))
+	Object.values(designFonts).forEach(val =>
+		Object.values(val).forEach(val => fonts.add(val.name))
+	);
 	// Convert To String
-	let fontsString = `'${[...fonts].join("', '")}'`
-	return `${fontsString}, sans-serif`
+	let fontsString = `'${[...fonts].join("', '")}'`;
+	return `${fontsString}, sans-serif`;
 }
 
 // console.log(getFontFamilies());
@@ -118,7 +118,7 @@ const strings = {
 	title: 'Diez',
 	caption: 'Keep your designs in sync with code',
 	helper: 'Please Modify the contents of “src/DesignLanguage.ts”.',
-	fontFamilies: getFontFamilies(),
+	fontFamilies: getFontFamilies()
 };
 
 const shadows = {
@@ -143,7 +143,7 @@ const shadows = {
 
 export const designLanguage = {
 	palette,
-	typography : designTokens.typography,
+	typography: designTokens.typography,
 	images,
 	layoutValues,
 	strings,

@@ -34,7 +34,7 @@ const colors = {
     primary: Design_figma_1.designTokens.colors.primary,
     secondary: Design_figma_1.designTokens.colors.secondary,
     tertiary: Design_figma_1.designTokens.colors.tertiary,
-    primaryLigth: Design_figma_1.designTokens.colors.background
+    primaryLigth: Design_figma_1.designTokens.colors.background,
 };
 /**
  * You can reference properties from other components.
@@ -58,7 +58,7 @@ const palette = {
     redColor: colors.red,
     orangeColor: colors.orange,
     yellowColor: colors.yellow,
-    greenColor: colors.green2
+    greenColor: colors.green2,
 };
 /**
  * All of rich language features of TypeScript are at your disposal; for example,
@@ -96,7 +96,7 @@ const layoutValues = {
 function getFontFamilies() {
     let fonts = new Set();
     // Add all fonts
-    Object.values(Design_figma_1.designFonts).forEach(val => Object.values(val).forEach(val => fonts.add(val.name)));
+    Object.values(Design_figma_1.designFonts).forEach((val) => Object.values(val).forEach((val => fonts.add(val.name))));
     // Convert To String
     let fontsString = `'${[...fonts].join("', '")}'`;
     return `${fontsString}, sans-serif`;
@@ -109,7 +109,7 @@ const strings = {
     title: 'Diez',
     caption: 'Keep your designs in sync with code',
     helper: 'Please Modify the contents of “src/DesignLanguage.ts”.',
-    fontFamilies: getFontFamilies()
+    fontFamilies: getFontFamilies(),
 };
 const shadows = {
     ...Design_figma_1.designTokens.shadows
