@@ -14,19 +14,30 @@ const options = {
 	Default: "inherit",
 	Primary: "primary",
 	Secondary: "secondary",
-	Acton: "action",
+	Tertiary: "tertiary",
+	Action: "action",
 	Error: "error",
 	Disable: "disabled",
-	None: null
+	White: "white",
+	Black: "black"
 };
 const defaultValue = "inherit";
 const groupId = "GROUP-ID1";
 const value = select(label, options, defaultValue, groupId);
+
+const labelS = "Size";
+const optionsS = {
+	Default: "inherit",
+	Small: "small",
+	Large: "large"
+};
+const defaultValueS = "inherit";
 
 console.log(TestIcon);
 export const Default = () => (
 	<Icon
 		src={TestIcon}
 		color={select(label, options, defaultValue, groupId)}
+		size={select(labelS, optionsS, defaultValueS, groupId)}
 	></Icon>
 );
