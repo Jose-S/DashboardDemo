@@ -2,37 +2,37 @@
   font-family: "Montserrat-SemiBold";
   font-weight: 400;
   font-style: normal;
-  src: local("Montserrat-SemiBold"), url("http://10.110.107.173:8080/assets/Design.figma.contents/fonts/Montserrat-SemiBold.otf");
+  src: local("Montserrat-SemiBold"), url("http://10.186.133.22:8080/assets/Design.figma.contents/fonts/Montserrat-SemiBold.ttf");
 }
 @font-face {
   font-family: "Montserrat-Bold";
   font-weight: 400;
   font-style: normal;
-  src: local("Montserrat-Bold"), url("http://10.110.107.173:8080/assets/Design.figma.contents/fonts/Montserrat-Bold.otf");
+  src: local("Montserrat-Bold"), url("http://10.186.133.22:8080/assets/Design.figma.contents/fonts/Montserrat-Bold.ttf");
 }
 @font-face {
   font-family: "Inter-Medium";
   font-weight: 400;
   font-style: normal;
-  src: local("Inter-Medium"), url("http://10.110.107.173:8080/assets/Design.figma.contents/fonts/Inter-Medium.otf");
+  src: local("Inter-Medium"), url("http://10.186.133.22:8080/assets/Design.figma.contents/fonts/Inter-Medium.otf");
 }
 @font-face {
   font-family: "Inter-SemiBold";
   font-weight: 400;
   font-style: normal;
-  src: local("Inter-SemiBold"), url("http://10.110.107.173:8080/assets/Design.figma.contents/fonts/Inter-SemiBold.otf");
+  src: local("Inter-SemiBold"), url("http://10.186.133.22:8080/assets/Design.figma.contents/fonts/Inter-SemiBold.otf");
 }
 @font-face {
   font-family: "Inter-Regular";
   font-weight: 400;
   font-style: normal;
-  src: local("Inter-Regular"), url("http://10.110.107.173:8080/assets/Design.figma.contents/fonts/Inter-Regular.otf");
+  src: local("Inter-Regular"), url("http://10.186.133.22:8080/assets/Design.figma.contents/fonts/Inter-Regular.otf");
 }
 @font-face {
   font-family: "Inter-Bold";
   font-weight: 400;
   font-style: normal;
-  src: local("Inter-Bold"), url("http://10.110.107.173:8080/assets/Design.figma.contents/fonts/Inter-Bold.otf");
+  src: local("Inter-Bold"), url("http://10.186.133.22:8080/assets/Design.figma.contents/fonts/Inter-Bold.otf");
 }
 
 $palette-background: hsla(223.99999999999997, 100%, 97.05882352941177%, 1);
@@ -228,6 +228,7 @@ $strings-font-families: "'Montserrat-SemiBold', 'Montserrat-Bold', 'Inter-Medium
   letter-spacing: 0px;
   text-align: start;
   text-decoration: none;
+  line-height: 56.25px;
 }
 
 @mixin design-typography-font-style9 {
@@ -236,9 +237,10 @@ $strings-font-families: "'Montserrat-SemiBold', 'Montserrat-Bold', 'Inter-Medium
   font-style: normal;
   font-size: 36px;
   color: hsla(0, 0%, 20%, 1);
-  letter-spacing: 0px;
+  letter-spacing: 0.25px;
   text-align: start;
   text-decoration: none;
+  line-height: 20px;
 }
 
 @mixin design-typography-font-style8 {
@@ -247,9 +249,10 @@ $strings-font-families: "'Montserrat-SemiBold', 'Montserrat-Bold', 'Inter-Medium
   font-style: normal;
   font-size: 32px;
   color: hsla(0, 0%, 20%, 1);
-  letter-spacing: 0px;
+  letter-spacing: 0.25px;
   text-align: start;
   text-decoration: none;
+  line-height: 20px;
 }
 
 @mixin design-typography-font-style7 {
@@ -258,9 +261,10 @@ $strings-font-families: "'Montserrat-SemiBold', 'Montserrat-Bold', 'Inter-Medium
   font-style: normal;
   font-size: 24px;
   color: hsla(0, 0%, 20%, 1);
-  letter-spacing: 0px;
+  letter-spacing: 0.25px;
   text-align: start;
   text-decoration: none;
+  line-height: 36px;
 }
 
 @mixin design-typography-font-style4 {
@@ -269,9 +273,10 @@ $strings-font-families: "'Montserrat-SemiBold', 'Montserrat-Bold', 'Inter-Medium
   font-style: normal;
   font-size: 16px;
   color: hsla(0, 0%, 20%, 1);
-  letter-spacing: 0px;
+  letter-spacing: 0.25px;
   text-align: start;
   text-decoration: none;
+  line-height: 20px;
 }
 
 @mixin design-typography-font-style3 {
@@ -280,9 +285,10 @@ $strings-font-families: "'Montserrat-SemiBold', 'Montserrat-Bold', 'Inter-Medium
   font-style: normal;
   font-size: 14px;
   color: hsla(0, 0%, 20%, 1);
-  letter-spacing: 0px;
+  letter-spacing: 0.315px;
   text-align: start;
   text-decoration: none;
+  line-height: 16.40625px;
 }
 
 @mixin design-typography-font-style2 {
@@ -291,9 +297,10 @@ $strings-font-families: "'Montserrat-SemiBold', 'Montserrat-Bold', 'Inter-Medium
   font-style: normal;
   font-size: 12px;
   color: hsla(0, 0%, 20%, 1);
-  letter-spacing: 0px;
+  letter-spacing: 0.4000000059604645px;
   text-align: start;
   text-decoration: none;
+  line-height: 16px;
 }
 
 @mixin design-typography-font-style1 {
@@ -302,9 +309,10 @@ $strings-font-families: "'Montserrat-SemiBold', 'Montserrat-Bold', 'Inter-Medium
   font-style: normal;
   font-size: 10px;
   color: hsla(0, 0%, 20%, 1);
-  letter-spacing: 0px;
+  letter-spacing: 1px;
   text-align: start;
   text-decoration: none;
+  line-height: 16px;
 }
 
 @mixin design-typography-font-style12 {
@@ -313,9 +321,10 @@ $strings-font-families: "'Montserrat-SemiBold', 'Montserrat-Bold', 'Inter-Medium
   font-style: normal;
   font-size: 96px;
   color: hsla(0, 0%, 20%, 1);
-  letter-spacing: 0px;
+  letter-spacing: -1.5px;
   text-align: start;
   text-decoration: none;
+  line-height: 112.5px;
 }
 
 @mixin design-typography-font-style11 {
@@ -327,6 +336,7 @@ $strings-font-families: "'Montserrat-SemiBold', 'Montserrat-Bold', 'Inter-Medium
   letter-spacing: 0px;
   text-align: start;
   text-decoration: none;
+  line-height: 75px;
 }
 
 @mixin design-typography-font-style6 {
@@ -335,9 +345,10 @@ $strings-font-families: "'Montserrat-SemiBold', 'Montserrat-Bold', 'Inter-Medium
   font-style: normal;
   font-size: 20px;
   color: hsla(0, 0%, 20%, 1);
-  letter-spacing: 0px;
+  letter-spacing: 0.5px;
   text-align: start;
   text-decoration: none;
+  line-height: 20px;
 }
 
 @mixin design-typography-font-style5 {
@@ -346,8 +357,9 @@ $strings-font-families: "'Montserrat-SemiBold', 'Montserrat-Bold', 'Inter-Medium
   font-style: normal;
   font-size: 18px;
   color: hsla(0, 0%, 20%, 1);
-  letter-spacing: 0px;
+  letter-spacing: 0.5px;
   text-align: start;
   text-decoration: none;
+  line-height: 20px;
 }
 
