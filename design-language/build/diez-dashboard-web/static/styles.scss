@@ -2,13 +2,13 @@
   font-family: "Montserrat-SemiBold";
   font-weight: 400;
   font-style: normal;
-  src: local("Montserrat-SemiBold"), url("/diez/assets/Design.figma.contents/fonts/Montserrat-SemiBold.otf");
+  src: local("Montserrat-SemiBold"), url("/diez/assets/Design.figma.contents/fonts/Montserrat-SemiBold.ttf");
 }
 @font-face {
   font-family: "Montserrat-Bold";
   font-weight: 400;
   font-style: normal;
-  src: local("Montserrat-Bold"), url("/diez/assets/Design.figma.contents/fonts/Montserrat-Bold.otf");
+  src: local("Montserrat-Bold"), url("/diez/assets/Design.figma.contents/fonts/Montserrat-Bold.ttf");
 }
 @font-face {
   font-family: "Inter-Medium";
@@ -37,6 +37,7 @@
 
 $palette-background: hsla(223.99999999999997, 100%, 97.05882352941177%, 1);
 $palette-card-background: hsla(0, 0%, 100%, 1);
+$palette-tooltip-background: hsla(0, 0%, 50.98039215686274%, 1);
 $palette-text-primary: hsla(0, 0%, 20%, 1);
 $palette-text-secondary: hsla(0, 0%, 50.98039215686274%, 1);
 $palette-text-tertiary: hsla(0, 0%, 74.11764705882354%, 1);
@@ -105,6 +106,14 @@ $strings-font-families: "'Montserrat-SemiBold', 'Montserrat-Bold', 'Inter-Medium
 
 @mixin palette-card-background-color {
   color: hsla(0, 0%, 100%, 1);
+}
+
+@mixin palette-tooltip-background-background-color {
+  background-color: hsla(0, 0%, 50.98039215686274%, 1);
+}
+
+@mixin palette-tooltip-background-color {
+  color: hsla(0, 0%, 50.98039215686274%, 1);
 }
 
 @mixin palette-text-primary-background-color {
@@ -228,6 +237,7 @@ $strings-font-families: "'Montserrat-SemiBold', 'Montserrat-Bold', 'Inter-Medium
   letter-spacing: 0px;
   text-align: start;
   text-decoration: none;
+  line-height: 56.25px;
 }
 
 @mixin design-typography-font-style9 {
@@ -236,9 +246,10 @@ $strings-font-families: "'Montserrat-SemiBold', 'Montserrat-Bold', 'Inter-Medium
   font-style: normal;
   font-size: 36px;
   color: hsla(0, 0%, 20%, 1);
-  letter-spacing: 0px;
+  letter-spacing: 0.25px;
   text-align: start;
   text-decoration: none;
+  line-height: 20px;
 }
 
 @mixin design-typography-font-style8 {
@@ -247,9 +258,10 @@ $strings-font-families: "'Montserrat-SemiBold', 'Montserrat-Bold', 'Inter-Medium
   font-style: normal;
   font-size: 32px;
   color: hsla(0, 0%, 20%, 1);
-  letter-spacing: 0px;
+  letter-spacing: 0.25px;
   text-align: start;
   text-decoration: none;
+  line-height: 20px;
 }
 
 @mixin design-typography-font-style7 {
@@ -258,9 +270,10 @@ $strings-font-families: "'Montserrat-SemiBold', 'Montserrat-Bold', 'Inter-Medium
   font-style: normal;
   font-size: 24px;
   color: hsla(0, 0%, 20%, 1);
-  letter-spacing: 0px;
+  letter-spacing: 0.25px;
   text-align: start;
   text-decoration: none;
+  line-height: 36px;
 }
 
 @mixin design-typography-font-style4 {
@@ -269,9 +282,10 @@ $strings-font-families: "'Montserrat-SemiBold', 'Montserrat-Bold', 'Inter-Medium
   font-style: normal;
   font-size: 16px;
   color: hsla(0, 0%, 20%, 1);
-  letter-spacing: 0px;
+  letter-spacing: 0.25px;
   text-align: start;
   text-decoration: none;
+  line-height: 20px;
 }
 
 @mixin design-typography-font-style3 {
@@ -280,9 +294,10 @@ $strings-font-families: "'Montserrat-SemiBold', 'Montserrat-Bold', 'Inter-Medium
   font-style: normal;
   font-size: 14px;
   color: hsla(0, 0%, 20%, 1);
-  letter-spacing: 0px;
+  letter-spacing: 0.315px;
   text-align: start;
   text-decoration: none;
+  line-height: 16.40625px;
 }
 
 @mixin design-typography-font-style2 {
@@ -291,9 +306,10 @@ $strings-font-families: "'Montserrat-SemiBold', 'Montserrat-Bold', 'Inter-Medium
   font-style: normal;
   font-size: 12px;
   color: hsla(0, 0%, 20%, 1);
-  letter-spacing: 0px;
+  letter-spacing: 0.4000000059604645px;
   text-align: start;
   text-decoration: none;
+  line-height: 16px;
 }
 
 @mixin design-typography-font-style1 {
@@ -302,9 +318,10 @@ $strings-font-families: "'Montserrat-SemiBold', 'Montserrat-Bold', 'Inter-Medium
   font-style: normal;
   font-size: 10px;
   color: hsla(0, 0%, 20%, 1);
-  letter-spacing: 0px;
+  letter-spacing: 1px;
   text-align: start;
   text-decoration: none;
+  line-height: 16px;
 }
 
 @mixin design-typography-font-style12 {
@@ -313,9 +330,10 @@ $strings-font-families: "'Montserrat-SemiBold', 'Montserrat-Bold', 'Inter-Medium
   font-style: normal;
   font-size: 96px;
   color: hsla(0, 0%, 20%, 1);
-  letter-spacing: 0px;
+  letter-spacing: -1.5px;
   text-align: start;
   text-decoration: none;
+  line-height: 112.5px;
 }
 
 @mixin design-typography-font-style11 {
@@ -327,6 +345,7 @@ $strings-font-families: "'Montserrat-SemiBold', 'Montserrat-Bold', 'Inter-Medium
   letter-spacing: 0px;
   text-align: start;
   text-decoration: none;
+  line-height: 75px;
 }
 
 @mixin design-typography-font-style6 {
@@ -335,9 +354,10 @@ $strings-font-families: "'Montserrat-SemiBold', 'Montserrat-Bold', 'Inter-Medium
   font-style: normal;
   font-size: 20px;
   color: hsla(0, 0%, 20%, 1);
-  letter-spacing: 0px;
+  letter-spacing: 0.5px;
   text-align: start;
   text-decoration: none;
+  line-height: 20px;
 }
 
 @mixin design-typography-font-style5 {
@@ -346,8 +366,9 @@ $strings-font-families: "'Montserrat-SemiBold', 'Montserrat-Bold', 'Inter-Medium
   font-style: normal;
   font-size: 18px;
   color: hsla(0, 0%, 20%, 1);
-  letter-spacing: 0px;
+  letter-spacing: 0.5px;
   text-align: start;
   text-decoration: none;
+  line-height: 20px;
 }
 

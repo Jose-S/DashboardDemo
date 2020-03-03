@@ -167,6 +167,7 @@ class Palette {
   constructor({
     background = {h: 0.6222222222222221, s: 1, l: 0.9705882352941176, a: 1},
     cardBackground = {h: 0, s: 0, l: 1, a: 1},
+    tooltipBackground = {h: 0, s: 0, l: 0.5098039215686274, a: 1},
     textPrimary = {h: 0, s: 0, l: 0.2, a: 1},
     textSecondary = {h: 0, s: 0, l: 0.5098039215686274, a: 1},
     textTertiary = {h: 0, s: 0, l: 0.7411764705882353, a: 1},
@@ -190,6 +191,10 @@ class Palette {
      * `Colors.white` ( hsla(0, 0, 1, 1) )
      */
     this.cardBackground = new Color(cardBackground);
+    /**
+     * `Colors.gray3` ( hsla(0, 0, 0.51, 1) )
+     */
+    this.tooltipBackground = new Color(tooltipBackground);
     /**
      * `Colors.black` ( hsla(0, 0, 0.2, 1) )
      */
@@ -269,7 +274,7 @@ class File {
     /**
      * File data.
      *
-     * assets/Design.figma.contents/fonts/Montserrat-SemiBold.otf
+     * assets/Design.figma.contents/fonts/Montserrat-SemiBold.ttf
      */
     this.src = src;
     /**
@@ -307,7 +312,7 @@ class Font {
     /**
      * Font data.
      *
-     * assets/Design.figma.contents/fonts/Montserrat-SemiBold.otf
+     * assets/Design.figma.contents/fonts/Montserrat-SemiBold.ttf
      */
     this.file = new File(file);
     /**
@@ -376,7 +381,7 @@ class Typograph {
     /**
      * Typograph data.
      *
-     * -1
+     * 56.25
      */
     this.lineHeight = lineHeight;
     /**
@@ -479,18 +484,18 @@ diezHTMLExtensions.push(() => {
 
 class DesignTypography {
   constructor({
-    fontStyle10 = {font: {file: {src: "assets/Design.figma.contents/fonts/Montserrat-SemiBold.otf", type: "font"}, name: "Montserrat-SemiBold", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 48, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
-    fontStyle9 = {font: {file: {src: "assets/Design.figma.contents/fonts/Montserrat-Bold.otf", type: "font"}, name: "Montserrat-Bold", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 36, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
-    fontStyle8 = {font: {file: {src: "assets/Design.figma.contents/fonts/Inter-Medium.otf", type: "font"}, name: "Inter-Medium", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 32, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
-    fontStyle7 = {font: {file: {src: "assets/Design.figma.contents/fonts/Inter-SemiBold.otf", type: "font"}, name: "Inter-SemiBold", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 24, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
-    fontStyle4 = {font: {file: {src: "assets/Design.figma.contents/fonts/Inter-Regular.otf", type: "font"}, name: "Inter-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 16, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
-    fontStyle3 = {font: {file: {src: "assets/Design.figma.contents/fonts/Inter-SemiBold.otf", type: "font"}, name: "Inter-SemiBold", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 14, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
-    fontStyle2 = {font: {file: {src: "assets/Design.figma.contents/fonts/Inter-Medium.otf", type: "font"}, name: "Inter-Medium", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 12, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
-    fontStyle1 = {font: {file: {src: "assets/Design.figma.contents/fonts/Inter-Regular.otf", type: "font"}, name: "Inter-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 10, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
-    fontStyle12 = {font: {file: {src: "assets/Design.figma.contents/fonts/Montserrat-SemiBold.otf", type: "font"}, name: "Montserrat-SemiBold", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 96, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
-    fontStyle11 = {font: {file: {src: "assets/Design.figma.contents/fonts/Montserrat-Bold.otf", type: "font"}, name: "Montserrat-Bold", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 64, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
-    fontStyle6 = {font: {file: {src: "assets/Design.figma.contents/fonts/Inter-Medium.otf", type: "font"}, name: "Inter-Medium", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 20, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []},
-    fontStyle5 = {font: {file: {src: "assets/Design.figma.contents/fonts/Inter-Bold.otf", type: "font"}, name: "Inter-Bold", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 18, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: -1, letterSpacing: 0, alignment: "natural", decoration: []}
+    fontStyle10 = {font: {file: {src: "assets/Design.figma.contents/fonts/Montserrat-SemiBold.ttf", type: "font"}, name: "Montserrat-SemiBold", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 48, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: 56.25, letterSpacing: 0, alignment: "natural", decoration: []},
+    fontStyle9 = {font: {file: {src: "assets/Design.figma.contents/fonts/Montserrat-Bold.ttf", type: "font"}, name: "Montserrat-Bold", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 36, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: 20, letterSpacing: 0.25, alignment: "natural", decoration: []},
+    fontStyle8 = {font: {file: {src: "assets/Design.figma.contents/fonts/Inter-Medium.otf", type: "font"}, name: "Inter-Medium", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 32, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: 20, letterSpacing: 0.25, alignment: "natural", decoration: []},
+    fontStyle7 = {font: {file: {src: "assets/Design.figma.contents/fonts/Inter-SemiBold.otf", type: "font"}, name: "Inter-SemiBold", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 24, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: 36, letterSpacing: 0.25, alignment: "natural", decoration: []},
+    fontStyle4 = {font: {file: {src: "assets/Design.figma.contents/fonts/Inter-Regular.otf", type: "font"}, name: "Inter-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 16, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: 20, letterSpacing: 0.25, alignment: "natural", decoration: []},
+    fontStyle3 = {font: {file: {src: "assets/Design.figma.contents/fonts/Inter-SemiBold.otf", type: "font"}, name: "Inter-SemiBold", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 14, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: 16.40625, letterSpacing: 0.315, alignment: "natural", decoration: []},
+    fontStyle2 = {font: {file: {src: "assets/Design.figma.contents/fonts/Inter-Medium.otf", type: "font"}, name: "Inter-Medium", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 12, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: 16, letterSpacing: 0.4000000059604645, alignment: "natural", decoration: []},
+    fontStyle1 = {font: {file: {src: "assets/Design.figma.contents/fonts/Inter-Regular.otf", type: "font"}, name: "Inter-Regular", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 10, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: 16, letterSpacing: 1, alignment: "natural", decoration: []},
+    fontStyle12 = {font: {file: {src: "assets/Design.figma.contents/fonts/Montserrat-SemiBold.ttf", type: "font"}, name: "Montserrat-SemiBold", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 96, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: 112.5, letterSpacing: -1.5, alignment: "natural", decoration: []},
+    fontStyle11 = {font: {file: {src: "assets/Design.figma.contents/fonts/Montserrat-Bold.ttf", type: "font"}, name: "Montserrat-Bold", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 64, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: 75, letterSpacing: 0, alignment: "natural", decoration: []},
+    fontStyle6 = {font: {file: {src: "assets/Design.figma.contents/fonts/Inter-Medium.otf", type: "font"}, name: "Inter-Medium", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 20, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: 20, letterSpacing: 0.5, alignment: "natural", decoration: []},
+    fontStyle5 = {font: {file: {src: "assets/Design.figma.contents/fonts/Inter-Bold.otf", type: "font"}, name: "Inter-Bold", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 18, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: 20, letterSpacing: 0.5, alignment: "natural", decoration: []}
   } = {}) {
     /**
      * - font: `Montserrat-SemiBold, 400, normal`
@@ -498,7 +503,7 @@ class DesignTypography {
      * - color: `hsla(0, 0, 0.2, 1)`
      * - iosTextStyle: `body`
      * - shouldScale: `false`
-     * - lineHeight: `-1`
+     * - lineHeight: `56.25`
      * - letterSpacing: `0`
      * - alignment: `natural`
      * - decoration: `[]`
@@ -510,8 +515,8 @@ class DesignTypography {
      * - color: `hsla(0, 0, 0.2, 1)`
      * - iosTextStyle: `body`
      * - shouldScale: `false`
-     * - lineHeight: `-1`
-     * - letterSpacing: `0`
+     * - lineHeight: `20`
+     * - letterSpacing: `0.25`
      * - alignment: `natural`
      * - decoration: `[]`
      */
@@ -522,8 +527,8 @@ class DesignTypography {
      * - color: `hsla(0, 0, 0.2, 1)`
      * - iosTextStyle: `body`
      * - shouldScale: `false`
-     * - lineHeight: `-1`
-     * - letterSpacing: `0`
+     * - lineHeight: `20`
+     * - letterSpacing: `0.25`
      * - alignment: `natural`
      * - decoration: `[]`
      */
@@ -534,8 +539,8 @@ class DesignTypography {
      * - color: `hsla(0, 0, 0.2, 1)`
      * - iosTextStyle: `body`
      * - shouldScale: `false`
-     * - lineHeight: `-1`
-     * - letterSpacing: `0`
+     * - lineHeight: `36`
+     * - letterSpacing: `0.25`
      * - alignment: `natural`
      * - decoration: `[]`
      */
@@ -546,8 +551,8 @@ class DesignTypography {
      * - color: `hsla(0, 0, 0.2, 1)`
      * - iosTextStyle: `body`
      * - shouldScale: `false`
-     * - lineHeight: `-1`
-     * - letterSpacing: `0`
+     * - lineHeight: `20`
+     * - letterSpacing: `0.25`
      * - alignment: `natural`
      * - decoration: `[]`
      */
@@ -558,8 +563,8 @@ class DesignTypography {
      * - color: `hsla(0, 0, 0.2, 1)`
      * - iosTextStyle: `body`
      * - shouldScale: `false`
-     * - lineHeight: `-1`
-     * - letterSpacing: `0`
+     * - lineHeight: `16.40625`
+     * - letterSpacing: `0.315`
      * - alignment: `natural`
      * - decoration: `[]`
      */
@@ -570,8 +575,8 @@ class DesignTypography {
      * - color: `hsla(0, 0, 0.2, 1)`
      * - iosTextStyle: `body`
      * - shouldScale: `false`
-     * - lineHeight: `-1`
-     * - letterSpacing: `0`
+     * - lineHeight: `16`
+     * - letterSpacing: `0.4000000059604645`
      * - alignment: `natural`
      * - decoration: `[]`
      */
@@ -582,8 +587,8 @@ class DesignTypography {
      * - color: `hsla(0, 0, 0.2, 1)`
      * - iosTextStyle: `body`
      * - shouldScale: `false`
-     * - lineHeight: `-1`
-     * - letterSpacing: `0`
+     * - lineHeight: `16`
+     * - letterSpacing: `1`
      * - alignment: `natural`
      * - decoration: `[]`
      */
@@ -594,8 +599,8 @@ class DesignTypography {
      * - color: `hsla(0, 0, 0.2, 1)`
      * - iosTextStyle: `body`
      * - shouldScale: `false`
-     * - lineHeight: `-1`
-     * - letterSpacing: `0`
+     * - lineHeight: `112.5`
+     * - letterSpacing: `-1.5`
      * - alignment: `natural`
      * - decoration: `[]`
      */
@@ -606,7 +611,7 @@ class DesignTypography {
      * - color: `hsla(0, 0, 0.2, 1)`
      * - iosTextStyle: `body`
      * - shouldScale: `false`
-     * - lineHeight: `-1`
+     * - lineHeight: `75`
      * - letterSpacing: `0`
      * - alignment: `natural`
      * - decoration: `[]`
@@ -618,8 +623,8 @@ class DesignTypography {
      * - color: `hsla(0, 0, 0.2, 1)`
      * - iosTextStyle: `body`
      * - shouldScale: `false`
-     * - lineHeight: `-1`
-     * - letterSpacing: `0`
+     * - lineHeight: `20`
+     * - letterSpacing: `0.5`
      * - alignment: `natural`
      * - decoration: `[]`
      */
@@ -630,8 +635,8 @@ class DesignTypography {
      * - color: `hsla(0, 0, 0.2, 1)`
      * - iosTextStyle: `body`
      * - shouldScale: `false`
-     * - lineHeight: `-1`
-     * - letterSpacing: `0`
+     * - lineHeight: `20`
+     * - letterSpacing: `0.5`
      * - alignment: `natural`
      * - decoration: `[]`
      */

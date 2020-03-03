@@ -20,3 +20,7 @@ Runs the app in the development mode. If a Diez hot server is running, the app w
 ### `yarn build` or `npm run build`
 
 Builds the app for production to the `dist` folder.
+
+https://marmelab.com/react-admin/Theming.html
+https://github.com/marmelab/react-admin/blob/b6a403af1f0d54c3457dd43a518e7a2ff81df338/packages/ra-ui-materialui/src/layout/MenuItemLink.tsx#L22
+https://reacttraining.com/react-router/web/api/NavLink

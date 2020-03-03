@@ -18,42 +18,36 @@ transition: color 0.5s ease;
 	}
 
 	${props =>
-		props.color === "tertiary" &&
-		css`
-			color: ${props => props.theme.palette.tertiary.main};
-		`}
+    props.color === "tertiary" &&
+    css`
+      color: ${props => props.theme.palette.tertiary.main};
+    `}
 
 	${props =>
-		props.color === "black" &&
-		css`
-			color: #333;
-		`}
+    props.color === "black" &&
+    css`
+      color: #333;
+    `}
 
 	${props =>
-		props.color === "white" &&
-		css`
-			color: #fff;
-		`}
+    props.color === "white" &&
+    css`
+      color: #fff;
+    `}
 `;
 
-const Icon = ({
-	src,
-	color = "inherit",
-	size = "default",
-	accessibleTitle,
-	htmlColor
-}) => {
-	// Conditional logic to determine props to pass down
+const Icon = ({ src, color = "inherit", size = "default", accessibleTitle, htmlColor }) => {
+  // Conditional logic to determine props to pass down
 
-	var inputProps = {
-		component: src,
-		titleAccess: accessibleTitle ? accessibleTitle : undefined,
-		htmlColor: htmlColor ? htmlColor : undefined,
-		color: htmlColor ? undefined : color
-	};
+  var inputProps = {
+    component: src,
+    titleAccess: accessibleTitle ? accessibleTitle : undefined,
+    htmlColor: htmlColor ? htmlColor : undefined,
+    color: htmlColor ? undefined : color
+  };
 
-	// spread declaration to add props
-	return <SVG component={src} fontSize={size} {...inputProps}></SVG>;
+  // spread declaration to add props
+  return <SVG component={src} fontSize={size} {...inputProps}></SVG>;
 };
 
 export default Icon;

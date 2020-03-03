@@ -1,12 +1,12 @@
 /* // The Diez web compiler creates shared styles for Sass and CSS. The styles
 // imported here can be found at `build/diez-dashboard-web/static/styles.scss`,
 // relative to the project root. */
-@import '~diez-dashboard/static/styles.css';
+@import "~diez-dashboard/static/styles.css";
 
 :root {
   --color-bg-primary: var(--palette-background);
   --color-bg-card: var(--palette-card-background);
-
+  --color-bg-tooltip: var(--palette-tooltip-background);
   --color-primary: var(--palette-primary-color);
   --color-secondary: var(--palette-secondary-color);
   --color-tertiary: var(--palette-tertiary-color);
@@ -39,9 +39,8 @@
   --color-text-inverse-soft: #bbb;
 
   --font-display: Georgia, Times, "Times New Roman", serif;
-  --font-body: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
-    "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana,
-    "Verdana Ref", sans-serif;
+  --font-body: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans",
+    "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
 
   --font-weight-normal: 400;
   --font-weight-display: 400;

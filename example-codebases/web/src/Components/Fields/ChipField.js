@@ -6,24 +6,24 @@ import Chip from "@material-ui/core/Chip";
 // ${props => props.theme.typography.size4}
 const Pill = styled(Chip)`
 	
-   ${tw`rounded-lg capitalize w-28 fontStyle-1 font-bold tracking-wider`}
+   ${tw`rounded-lg capitalize w-28 fontStyle-4 font-bold tracking-wider`}
 	
    color: ${props => props.theme.palette.pillColors[props.label]};
    background-color: ${props =>
-			props.theme.palette.pillColors[props.label].replace("1)", "0.3)")};
+     props.theme.palette.pillColors[props.label].replace("1)", "0.3)")};
 			
 `;
 
 const Field = styled.a`
-	${tw`p-4`}
+  ${tw`p-4`}
 `;
 
 // record[source]
 
 const ChipField = ({ record = {}, source }) => (
-	<Field>
-		<Pill label={record[source]} />
-	</Field>
+  <Field>
+    <Pill label={record[source]} />
+  </Field>
 );
 
 export default ChipField;

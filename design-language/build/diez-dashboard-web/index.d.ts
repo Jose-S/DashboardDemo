@@ -47,6 +47,10 @@ export declare class Palette {
    */
   cardBackground: Color;
   /**
+   * `Colors.gray3` ( hsla(0, 0, 0.51, 1) )
+   */
+  tooltipBackground: Color;
+  /**
    * `Colors.black` ( hsla(0, 0, 0.2, 1) )
    */
   textPrimary: Color;
@@ -119,7 +123,7 @@ export declare class Font {
   /**
    * Font data.
    *
-   * assets/Design.figma.contents/fonts/Montserrat-SemiBold.otf
+   * assets/Design.figma.contents/fonts/Montserrat-SemiBold.ttf
    */
   file: File;
   /**
@@ -187,7 +191,7 @@ export declare class DesignTypography {
    * - color: `hsla(0, 0, 0.2, 1)`
    * - iosTextStyle: `body`
    * - shouldScale: `false`
-   * - lineHeight: `-1`
+   * - lineHeight: `56.25`
    * - letterSpacing: `0`
    * - alignment: `natural`
    * - decoration: `[]`
@@ -199,8 +203,8 @@ export declare class DesignTypography {
    * - color: `hsla(0, 0, 0.2, 1)`
    * - iosTextStyle: `body`
    * - shouldScale: `false`
-   * - lineHeight: `-1`
-   * - letterSpacing: `0`
+   * - lineHeight: `20`
+   * - letterSpacing: `0.25`
    * - alignment: `natural`
    * - decoration: `[]`
    */
@@ -211,8 +215,8 @@ export declare class DesignTypography {
    * - color: `hsla(0, 0, 0.2, 1)`
    * - iosTextStyle: `body`
    * - shouldScale: `false`
-   * - lineHeight: `-1`
-   * - letterSpacing: `0`
+   * - lineHeight: `20`
+   * - letterSpacing: `0.25`
    * - alignment: `natural`
    * - decoration: `[]`
    */
@@ -223,8 +227,8 @@ export declare class DesignTypography {
    * - color: `hsla(0, 0, 0.2, 1)`
    * - iosTextStyle: `body`
    * - shouldScale: `false`
-   * - lineHeight: `-1`
-   * - letterSpacing: `0`
+   * - lineHeight: `36`
+   * - letterSpacing: `0.25`
    * - alignment: `natural`
    * - decoration: `[]`
    */
@@ -235,8 +239,8 @@ export declare class DesignTypography {
    * - color: `hsla(0, 0, 0.2, 1)`
    * - iosTextStyle: `body`
    * - shouldScale: `false`
-   * - lineHeight: `-1`
-   * - letterSpacing: `0`
+   * - lineHeight: `20`
+   * - letterSpacing: `0.25`
    * - alignment: `natural`
    * - decoration: `[]`
    */
@@ -247,8 +251,8 @@ export declare class DesignTypography {
    * - color: `hsla(0, 0, 0.2, 1)`
    * - iosTextStyle: `body`
    * - shouldScale: `false`
-   * - lineHeight: `-1`
-   * - letterSpacing: `0`
+   * - lineHeight: `16.40625`
+   * - letterSpacing: `0.315`
    * - alignment: `natural`
    * - decoration: `[]`
    */
@@ -259,8 +263,8 @@ export declare class DesignTypography {
    * - color: `hsla(0, 0, 0.2, 1)`
    * - iosTextStyle: `body`
    * - shouldScale: `false`
-   * - lineHeight: `-1`
-   * - letterSpacing: `0`
+   * - lineHeight: `16`
+   * - letterSpacing: `0.4000000059604645`
    * - alignment: `natural`
    * - decoration: `[]`
    */
@@ -271,8 +275,8 @@ export declare class DesignTypography {
    * - color: `hsla(0, 0, 0.2, 1)`
    * - iosTextStyle: `body`
    * - shouldScale: `false`
-   * - lineHeight: `-1`
-   * - letterSpacing: `0`
+   * - lineHeight: `16`
+   * - letterSpacing: `1`
    * - alignment: `natural`
    * - decoration: `[]`
    */
@@ -283,8 +287,8 @@ export declare class DesignTypography {
    * - color: `hsla(0, 0, 0.2, 1)`
    * - iosTextStyle: `body`
    * - shouldScale: `false`
-   * - lineHeight: `-1`
-   * - letterSpacing: `0`
+   * - lineHeight: `112.5`
+   * - letterSpacing: `-1.5`
    * - alignment: `natural`
    * - decoration: `[]`
    */
@@ -295,7 +299,7 @@ export declare class DesignTypography {
    * - color: `hsla(0, 0, 0.2, 1)`
    * - iosTextStyle: `body`
    * - shouldScale: `false`
-   * - lineHeight: `-1`
+   * - lineHeight: `75`
    * - letterSpacing: `0`
    * - alignment: `natural`
    * - decoration: `[]`
@@ -307,8 +311,8 @@ export declare class DesignTypography {
    * - color: `hsla(0, 0, 0.2, 1)`
    * - iosTextStyle: `body`
    * - shouldScale: `false`
-   * - lineHeight: `-1`
-   * - letterSpacing: `0`
+   * - lineHeight: `20`
+   * - letterSpacing: `0.5`
    * - alignment: `natural`
    * - decoration: `[]`
    */
@@ -319,8 +323,8 @@ export declare class DesignTypography {
    * - color: `hsla(0, 0, 0.2, 1)`
    * - iosTextStyle: `body`
    * - shouldScale: `false`
-   * - lineHeight: `-1`
-   * - letterSpacing: `0`
+   * - lineHeight: `20`
+   * - letterSpacing: `0.5`
    * - alignment: `natural`
    * - decoration: `[]`
    */
