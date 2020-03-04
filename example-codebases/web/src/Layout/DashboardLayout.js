@@ -38,7 +38,6 @@ const MySidebar = props => {
   return <Sidebar classes={classes} {...props} />;
 };
 const DashboardLayout = props => {
-  console.log(props);
   return (
     <Layout
       {...props}
