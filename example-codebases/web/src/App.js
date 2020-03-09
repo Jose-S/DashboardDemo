@@ -4,7 +4,7 @@ import "./App.css";
 import PostIcon from "@material-ui/icons/Book";
 import UserIcon from "@material-ui/icons/Group";
 
-import { Admin, Resource, ListGuesser } from "react-admin";
+import { Admin, Resource, ListGuesser, Logout } from "react-admin";
 import { PostList, PostEdit, PostCreate, PostShow } from "./Components/posts";
 import { UserList } from "./Components/users";
 import Dashboard from "./Layout/Dashboard";
@@ -14,6 +14,7 @@ import jsonServerProvider from "ra-data-json-server";
 
 import selectTheme from "./themes/selected-theme";
 import { ThemeProvider, ThemeConsumer } from "styled-components";
+import PostScreen from "./Components/PostScreen/PostResource";
 
 const dataProvider = jsonServerProvider("http://jsonplaceholder.typicode.com");
 
@@ -58,14 +59,13 @@ const App = () => {
             dashboard={Dashboard}
             theme={theme}
           >
-            <div className={"selector"}>ewrew</div>
             <Resource
               name="posts"
               icon={PostIcon}
-              list={PostList}
-              edit={PostEdit}
-              create={PostCreate}
-              show={PostShow}
+              list={PostScreen}
+              //   edit={PostEdit}
+              //   create={PostCreate}
+              //   show={PostShow}
             />
             <Resource name="users" icon={UserIcon} list={UserList} />
             <Resource name="comments" list={ListGuesser} />

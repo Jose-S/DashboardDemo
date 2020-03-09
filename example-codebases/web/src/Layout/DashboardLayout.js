@@ -1,5 +1,5 @@
 // in src/MyLayout.js
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import { useSelector, useDispatch } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
@@ -18,18 +18,26 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 
 const MyAppBar = props => (
-  <AppBar {...props}>
-    <Toolbar>
-      <Typography variant="h6" id="react-admin-title" />
-    </Toolbar>
-  </AppBar>
+  <></>
+  //   <AppBar {...props}>
+  //     <Toolbar>
+  //       <Typography variant="h6" id="react-admin-title" />
+  //     </Toolbar>
+  //   </AppBar>
 );
 
 const useSidebarStyles = makeStyles({
   drawerPaper: {
     backgroundColor: "white",
     width: "96px",
-    height: "100%"
+    height: "100%",
+    marginTop: "0px"
+  }
+});
+
+const useLayoutStyles = makeStyles({
+  appFrame: {
+    marginTop: "0px"
   }
 });
 
@@ -37,6 +45,7 @@ const MySidebar = props => {
   const classes = useSidebarStyles();
   return <Sidebar classes={classes} {...props} />;
 };
+
 const DashboardLayout = props => {
   return (
     <Layout
@@ -45,6 +54,7 @@ const DashboardLayout = props => {
       sidebar={MySidebar}
       menu={Menu}
       notification={Notification}
+      classes={useLayoutStyles()}
     />
   );
 };

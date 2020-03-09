@@ -4,11 +4,11 @@
 const custom = require("../webpack.config");
 
 module.exports = {
-	webpackFinal: config => {
-		config.plugins.push(custom.plugins[2]);
-		return {
-			...config,
-			module: { ...config.module, rules: custom.module.rules }
-		};
-	}
+  webpackFinal: config => {
+    config.plugins.push(custom.plugins[2]);
+    return {
+      ...config,
+      module: { ...config.module, rules: custom.module.rules }
+    };
+  }
 };

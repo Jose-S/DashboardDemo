@@ -33,9 +33,16 @@ const PostFilter = props => (
   </Filter>
 );
 
+const Aside = () => (
+  <div style={{ width: 200, margin: "1em" }}>
+    <h6>Post details</h6>
+    <p>Posts will only be published one an editor approves them</p>
+  </div>
+);
+
 export const PostList = props => {
   var theme = useTheme();
-
+  console.log("PROPS", props);
   return (
     <List {...props} filters={<PostFilter />}>
       <Datagrid>
