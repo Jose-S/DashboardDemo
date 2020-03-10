@@ -1,10 +1,17 @@
+/**
+ * This Component creates a transparent app bar used to display the
+ * current user location. It also provides the ability to use
+ * breadcrumbs to naviaget to previus locations
+ *
+ */
+
 import React from "react";
-import styled from "styled-components/macro";
-import tw from "tailwind.macro";
-import LaunchIcon from "@material-ui/icons/Launch";
 import AppBarMaterial from "@material-ui/core/AppBar";
 import ToolbarMaterial from "@material-ui/core/Toolbar";
 import RouterBreadcrumb from "../Basic/Breadcrumb";
+
+import styled from "styled-components/macro";
+import tw from "tailwind.macro";
 
 const AppBarStyled = styled(AppBarMaterial)`
   ${tw`shadow-none h-24`}
@@ -15,7 +22,7 @@ const Title = styled.p`
 `;
 
 const Toolbar = styled(ToolbarMaterial)`
-  top: 16px;
+  ${tw`absolute bottom-0`}
 `;
 
 const AppBar = ({ title, location, children, props }) => (
@@ -25,6 +32,7 @@ const AppBar = ({ title, location, children, props }) => (
         <RouterBreadcrumb locTest={location} />
         <Title>{title}</Title>
       </div>
+      {/* Incase if any toolbar action buttons are added to the component */}
       {children}
     </Toolbar>
   </AppBarStyled>

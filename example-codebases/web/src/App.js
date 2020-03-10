@@ -14,7 +14,7 @@ import jsonServerProvider from "ra-data-json-server";
 
 import selectTheme from "./themes/selected-theme";
 import { ThemeProvider, ThemeConsumer } from "styled-components";
-import PostScreen from "./Components/PostScreen/PostResource";
+import PostScreen from "./Components/PostScreen/PostResourceAbstract";
 
 const dataProvider = jsonServerProvider("http://jsonplaceholder.typicode.com");
 
