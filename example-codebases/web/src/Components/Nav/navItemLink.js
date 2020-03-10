@@ -63,7 +63,7 @@ const NavItemLink = forwardRef(
             <IconItem>
               <Icon
                 src={iconSrc}
-                color={isActive ? "primary" : "default"}
+                color={isActive ? "primary" : "inherit"}
                 size={"large"}
                 accessibleTitle={title}
               />

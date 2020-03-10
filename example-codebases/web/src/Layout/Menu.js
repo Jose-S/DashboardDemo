@@ -18,12 +18,15 @@ const Menu = ({ onMenuClick, logout, ...props }) => {
   const isXSmall = useMediaQuery(theme => theme.breakpoints.down("xs"));
   const location = props.location.pathname;
   const open = useSelector(state => state.admin.ui.sidebarOpen);
+  const data = useSelector(state => state);
+  console.log("STORE", data);
   const resources = useSelector(getResources);
   const ref = React.createRef();
   let flat = resources.reduce((total, val) => total.concat(val.name), []);
 
   const getCurrentIndex = () => {
-    let curentIndex = flat.indexOf(location.replace("/", ""));
+    // TEMPORARY SOLUTION WILL FIND A BETTER ONE THAT RELOADS ONLY IF NEEDE
+    let curentIndex = flat.indexOf(location.split("/")[1]);
     return curentIndex;
   };
 
@@ -55,7 +58,7 @@ const Menu = ({ onMenuClick, logout, ...props }) => {
               onClick={onMenuClick}
               sidebarIsOpen={false}
               isActive={isActive}
-              ref={ref}
+              //   ref={ref}
             />
           );
         })}

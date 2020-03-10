@@ -4,7 +4,6 @@ import { ShowButton, Datagrid, ReferenceField, TextField, EditButton } from "rea
 // import "../App.css";
 
 export const PostList = ({ selectedRow, ...props }) => {
-  console.log("PROPS", props);
   return (
     <Datagrid rowClick="show" {...props}>
       <TextField source="id" />
