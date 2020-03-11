@@ -78,11 +78,12 @@ class Diez {
 module.exports.Diez = Diez;
 
 /**
-A component encapsulating color, including alpha transparency.
-
-You can use the provided static constructors [[Color.rgb]], [[Color.rgba]], [[Color.hsl]], [[Color.hsla]], and
-[[Color.hex]] to conveniently create color primitives using familiar patterns for color specification.
-*/
+ * A component encapsulating color, including alpha transparency.
+ * 
+ * You can use the provided static constructors [[Color.rgb]], [[Color.rgba]], [[Color.hsl]], [[Color.hsla]], and
+ * [[Color.hex]] to conveniently create color primitives using familiar patterns for color specification.
+ *
+ */
 class Color {
   constructor({
     h,
@@ -90,21 +91,29 @@ class Color {
     l,
     a
   }) {
-  /**
-  Provides simple hue-saturation-lightness-alpha color data.
-  */
+    /**
+     * Provides simple hue-saturation-lightness-alpha color data.
+     *
+     * 0.6222222222222221
+     */
     this.h = h;
-  /**
-  Provides simple hue-saturation-lightness-alpha color data.
-  */
+    /**
+     * Provides simple hue-saturation-lightness-alpha color data.
+     *
+     * 1
+     */
     this.s = s;
-  /**
-  Provides simple hue-saturation-lightness-alpha color data.
-  */
+    /**
+     * Provides simple hue-saturation-lightness-alpha color data.
+     *
+     * 0.9705882352941176
+     */
     this.l = l;
-  /**
-  Provides simple hue-saturation-lightness-alpha color data.
-  */
+    /**
+     * Provides simple hue-saturation-lightness-alpha color data.
+     *
+     * 1
+     */
     this.a = a;
   }
 }
@@ -151,8 +160,9 @@ Object.defineProperties(Color.prototype, {
 });
 
 /**
-You can reference properties from other components.
-*/
+ * You can reference properties from other components.
+ *
+ */
 class Palette {
   constructor({
     background = {h: 0.6222222222222221, s: 1, l: 0.9705882352941176, a: 1},
@@ -173,22 +183,73 @@ class Palette {
     yellowColor = {h: 0.12550200803212852, s: 0.8645833333333333, l: 0.6235294117647059, a: 1},
     greenColor = {h: 0.4037037037037037, s: 0.6338028169014084, l: 0.4176470588235294, a: 1}
   } = {}) {
+    /**
+     * `Colors.primaryLigth` ( hsla(0.62, 1, 0.97, 1) )
+     */
     this.background = new Color(background);
+    /**
+     * `Colors.white` ( hsla(0, 0, 1, 1) )
+     */
     this.cardBackground = new Color(cardBackground);
+    /**
+     * `Colors.gray3` ( hsla(0, 0, 0.51, 1) )
+     */
     this.tooltipBackground = new Color(tooltipBackground);
+    /**
+     * `Colors.black` ( hsla(0, 0, 0.2, 1) )
+     */
     this.textPrimary = new Color(textPrimary);
+    /**
+     * `Colors.gray3` ( hsla(0, 0, 0.51, 1) )
+     */
     this.textSecondary = new Color(textSecondary);
+    /**
+     * `Colors.gray4` ( hsla(0, 0, 0.74, 1) )
+     */
     this.textTertiary = new Color(textTertiary);
+    /**
+     * `Colors.white` ( hsla(0, 0, 1, 1) )
+     */
     this.textDarkContrast = new Color(textDarkContrast);
+    /**
+     * `Colors.primary` ( hsla(0.62, 0.83, 0.6, 1) )
+     */
     this.textHighEmphasis = new Color(textHighEmphasis);
+    /**
+     * `Colors.secondary` ( hsla(0.67, 0.54, 0.37, 1) )
+     */
     this.textLowEmphasis = new Color(textLowEmphasis);
+    /**
+     * `Colors.primary` ( hsla(0.62, 0.83, 0.6, 1) )
+     */
     this.primaryColor = new Color(primaryColor);
+    /**
+     * `Colors.primaryLigth` ( hsla(0.62, 1, 0.97, 1) )
+     */
     this.primaryColorLigth = new Color(primaryColorLigth);
+    /**
+     * `Colors.secondary` ( hsla(0.67, 0.54, 0.37, 1) )
+     */
     this.secondaryColor = new Color(secondaryColor);
+    /**
+     * `Colors.tertiary` ( hsla(0.62, 0.87, 0.21, 1) )
+     */
     this.tertiaryColor = new Color(tertiaryColor);
+    /**
+     * `Colors.red` ( hsla(0, 0.79, 0.63, 1) )
+     */
     this.redColor = new Color(redColor);
+    /**
+     * `Colors.orange` ( hsla(0.08, 0.87, 0.62, 1) )
+     */
     this.orangeColor = new Color(orangeColor);
+    /**
+     * `Colors.yellow` ( hsla(0.13, 0.86, 0.62, 1) )
+     */
     this.yellowColor = new Color(yellowColor);
+    /**
+     * `Colors.green2` ( hsla(0.4, 0.63, 0.42, 1) )
+     */
     this.greenColor = new Color(greenColor);
   }
 }
@@ -197,25 +258,30 @@ class Palette {
 module.exports.Palette = Palette;
 
 /**
-Provides a container for referencing local assets, which can be bridged by compilers to embed images, SVGs,
-and more. This component is used internally by [[Image]] and [[Font]].
-
-The compiler may enforce certain restrictions on the `type` of a `File` instance.
-
-Usage: `file = new File({src: 'assets/images/file.jpg', type: FileType.Image});`.
-*/
+ * Provides a container for referencing local assets, which can be bridged by compilers to embed images, SVGs,
+ * and more. This component is used internally by [[Image]] and [[Font]].
+ * 
+ * The compiler may enforce certain restrictions on the `type` of a `File` instance.
+ * 
+ * Usage: `file = new File({src: 'assets/images/file.jpg', type: FileType.Image});`.
+ *
+ */
 class File {
   constructor({
     src,
     type
   }) {
-  /**
-  File data.
-  */
+    /**
+     * File data.
+     *
+     * assets/Design.figma.contents/fonts/Montserrat-SemiBold.ttf
+     */
     this.src = src;
-  /**
-  File data.
-  */
+    /**
+     * File data.
+     *
+     * font
+     */
     this.type = type;
   }
 }
@@ -232,8 +298,9 @@ Object.defineProperties(File.prototype, {
 });
 
 /**
-A representation of a font resource, with a reference to a [[File]] containing a TTF or OTF font file.
-*/
+ * A representation of a font resource, with a reference to a [[File]] containing a TTF or OTF font file.
+ *
+ */
 class Font {
   constructor({
     file,
@@ -243,24 +310,34 @@ class Font {
     style
   }) {
     /**
-    Font data.
-    **/
+     * Font data.
+     *
+     * assets/Design.figma.contents/fonts/Montserrat-SemiBold.ttf
+     */
     this.file = new File(file);
-  /**
-  Font data.
-  */
+    /**
+     * Font data.
+     *
+     * Montserrat-SemiBold
+     */
     this.name = name;
-  /**
-  Font data.
-  */
+    /**
+     * Font data.
+     *
+     * [sans-serif]
+     */
     this.fallbacks = fallbacks;
-  /**
-  Font data.
-  */
+    /**
+     * Font data.
+     *
+     * 400
+     */
     this.weight = weight;
-  /**
-  Font data.
-  */
+    /**
+     * Font data.
+     *
+     * normal
+     */
     this.style = style;
   }
 }
@@ -269,9 +346,10 @@ class Font {
 module.exports.Font = Font;
 
 /**
-Describes a typograph including specification of a font name (understood to specify both a font face and a font
-weight) as well as a font size in device-local units and a font color.
-*/
+ * Describes a typograph including specification of a font name (understood to specify both a font face and a font
+ * weight) as well as a font size in device-local units and a font color.
+ *
+ */
 class Typograph {
   constructor({
     font,
@@ -283,32 +361,46 @@ class Typograph {
     decoration
   }) {
     /**
-    Typograph data.
-    **/
+     * Typograph data.
+     *
+     * Montserrat-SemiBold, 400, normal
+     */
     this.font = new Font(font);
-  /**
-  Typograph data.
-  */
+    /**
+     * Typograph data.
+     *
+     * 48
+     */
     this.fontSize = fontSize;
     /**
-    Typograph data.
-    **/
+     * Typograph data.
+     *
+     * hsla(0, 0, 0.2, 1)
+     */
     this.color = new Color(color);
-  /**
-  Typograph data.
-  */
+    /**
+     * Typograph data.
+     *
+     * 56.25
+     */
     this.lineHeight = lineHeight;
-  /**
-  Typograph data.
-  */
+    /**
+     * Typograph data.
+     *
+     * 0
+     */
     this.letterSpacing = letterSpacing;
-  /**
-  Typograph data.
-  */
+    /**
+     * Typograph data.
+     *
+     * natural
+     */
     this.alignment = alignment;
-  /**
-  Typograph data.
-  */
+    /**
+     * Typograph data.
+     *
+     * []
+     */
     this.decoration = decoration;
   }
 }
@@ -405,17 +497,149 @@ class DesignTypography {
     fontStyle6 = {font: {file: {src: "assets/Design.figma.contents/fonts/Inter-Medium.otf", type: "font"}, name: "Inter-Medium", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 20, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: 20, letterSpacing: 0.5, alignment: "natural", decoration: []},
     fontStyle5 = {font: {file: {src: "assets/Design.figma.contents/fonts/Inter-Bold.otf", type: "font"}, name: "Inter-Bold", fallbacks: ["sans-serif"], weight: 400, style: "normal"}, fontSize: 18, color: {h: 0, s: 0, l: 0.2, a: 1}, lineHeight: 20, letterSpacing: 0.5, alignment: "natural", decoration: []}
   } = {}) {
+    /**
+     * - font: `Montserrat-SemiBold, 400, normal`
+     * - fontSize: `48`
+     * - color: `hsla(0, 0, 0.2, 1)`
+     * - iosTextStyle: `body`
+     * - shouldScale: `false`
+     * - lineHeight: `56.25`
+     * - letterSpacing: `0`
+     * - alignment: `natural`
+     * - decoration: `[]`
+     */
     this.fontStyle10 = new Typograph(fontStyle10);
+    /**
+     * - font: `Montserrat-Bold, 400, normal`
+     * - fontSize: `36`
+     * - color: `hsla(0, 0, 0.2, 1)`
+     * - iosTextStyle: `body`
+     * - shouldScale: `false`
+     * - lineHeight: `20`
+     * - letterSpacing: `0.25`
+     * - alignment: `natural`
+     * - decoration: `[]`
+     */
     this.fontStyle9 = new Typograph(fontStyle9);
+    /**
+     * - font: `Inter-Medium, 400, normal`
+     * - fontSize: `32`
+     * - color: `hsla(0, 0, 0.2, 1)`
+     * - iosTextStyle: `body`
+     * - shouldScale: `false`
+     * - lineHeight: `20`
+     * - letterSpacing: `0.25`
+     * - alignment: `natural`
+     * - decoration: `[]`
+     */
     this.fontStyle8 = new Typograph(fontStyle8);
+    /**
+     * - font: `Inter-SemiBold, 400, normal`
+     * - fontSize: `24`
+     * - color: `hsla(0, 0, 0.2, 1)`
+     * - iosTextStyle: `body`
+     * - shouldScale: `false`
+     * - lineHeight: `36`
+     * - letterSpacing: `0.25`
+     * - alignment: `natural`
+     * - decoration: `[]`
+     */
     this.fontStyle7 = new Typograph(fontStyle7);
+    /**
+     * - font: `Inter-Regular, 400, normal`
+     * - fontSize: `16`
+     * - color: `hsla(0, 0, 0.2, 1)`
+     * - iosTextStyle: `body`
+     * - shouldScale: `false`
+     * - lineHeight: `20`
+     * - letterSpacing: `0.25`
+     * - alignment: `natural`
+     * - decoration: `[]`
+     */
     this.fontStyle4 = new Typograph(fontStyle4);
+    /**
+     * - font: `Inter-SemiBold, 400, normal`
+     * - fontSize: `14`
+     * - color: `hsla(0, 0, 0.2, 1)`
+     * - iosTextStyle: `body`
+     * - shouldScale: `false`
+     * - lineHeight: `16.40625`
+     * - letterSpacing: `0.315`
+     * - alignment: `natural`
+     * - decoration: `[]`
+     */
     this.fontStyle3 = new Typograph(fontStyle3);
+    /**
+     * - font: `Inter-Medium, 400, normal`
+     * - fontSize: `12`
+     * - color: `hsla(0, 0, 0.2, 1)`
+     * - iosTextStyle: `body`
+     * - shouldScale: `false`
+     * - lineHeight: `16`
+     * - letterSpacing: `0.4000000059604645`
+     * - alignment: `natural`
+     * - decoration: `[]`
+     */
     this.fontStyle2 = new Typograph(fontStyle2);
+    /**
+     * - font: `Inter-Regular, 400, normal`
+     * - fontSize: `10`
+     * - color: `hsla(0, 0, 0.2, 1)`
+     * - iosTextStyle: `body`
+     * - shouldScale: `false`
+     * - lineHeight: `16`
+     * - letterSpacing: `1`
+     * - alignment: `natural`
+     * - decoration: `[]`
+     */
     this.fontStyle1 = new Typograph(fontStyle1);
+    /**
+     * - font: `Montserrat-SemiBold, 400, normal`
+     * - fontSize: `96`
+     * - color: `hsla(0, 0, 0.2, 1)`
+     * - iosTextStyle: `body`
+     * - shouldScale: `false`
+     * - lineHeight: `112.5`
+     * - letterSpacing: `-1.5`
+     * - alignment: `natural`
+     * - decoration: `[]`
+     */
     this.fontStyle12 = new Typograph(fontStyle12);
+    /**
+     * - font: `Montserrat-Bold, 400, normal`
+     * - fontSize: `64`
+     * - color: `hsla(0, 0, 0.2, 1)`
+     * - iosTextStyle: `body`
+     * - shouldScale: `false`
+     * - lineHeight: `75`
+     * - letterSpacing: `0`
+     * - alignment: `natural`
+     * - decoration: `[]`
+     */
     this.fontStyle11 = new Typograph(fontStyle11);
+    /**
+     * - font: `Inter-Medium, 400, normal`
+     * - fontSize: `20`
+     * - color: `hsla(0, 0, 0.2, 1)`
+     * - iosTextStyle: `body`
+     * - shouldScale: `false`
+     * - lineHeight: `20`
+     * - letterSpacing: `0.5`
+     * - alignment: `natural`
+     * - decoration: `[]`
+     */
     this.fontStyle6 = new Typograph(fontStyle6);
+    /**
+     * - font: `Inter-Bold, 400, normal`
+     * - fontSize: `18`
+     * - color: `hsla(0, 0, 0.2, 1)`
+     * - iosTextStyle: `body`
+     * - shouldScale: `false`
+     * - lineHeight: `20`
+     * - letterSpacing: `0.5`
+     * - alignment: `natural`
+     * - decoration: `[]`
+     */
     this.fontStyle5 = new Typograph(fontStyle5);
   }
 }
@@ -424,9 +648,10 @@ class DesignTypography {
 module.exports.DesignTypography = DesignTypography;
 
 /**
-Typographs encapsulate type styles with support for a specific font, font size,
-and color. More typograph properties are coming soon.
-*/
+ * Typographs encapsulate type styles with support for a specific font, font size,
+ * and color. More typograph properties are coming soon.
+ *
+ */
 class Images {
   constructor({
   } = {}) {
@@ -437,8 +662,9 @@ class Images {
 module.exports.Images = Images;
 
 /**
-Here we create a custom reusable component for describing layout margins.
-*/
+ * Here we create a custom reusable component for describing layout margins.
+ *
+ */
 class Margin {
   constructor({
     top,
@@ -446,25 +672,33 @@ class Margin {
     left,
     right
   }) {
-  /**
-  Defining the interface of your component's data enables you to instantiate your own
-reusable components.
-  */
+    /**
+     * Defining the interface of your component's data enables you to instantiate your own
+     * reusable components.
+     *
+     * 40
+     */
     this.top = top;
-  /**
-  Defining the interface of your component's data enables you to instantiate your own
-reusable components.
-  */
+    /**
+     * Defining the interface of your component's data enables you to instantiate your own
+     * reusable components.
+     *
+     * 10
+     */
     this.bottom = bottom;
-  /**
-  Defining the interface of your component's data enables you to instantiate your own
-reusable components.
-  */
+    /**
+     * Defining the interface of your component's data enables you to instantiate your own
+     * reusable components.
+     *
+     * 10
+     */
     this.left = left;
-  /**
-  Defining the interface of your component's data enables you to instantiate your own
-reusable components.
-  */
+    /**
+     * Defining the interface of your component's data enables you to instantiate your own
+     * reusable components.
+     *
+     * 10
+     */
     this.right = right;
   }
 }
@@ -473,8 +707,9 @@ reusable components.
 module.exports.Margin = Margin;
 
 /**
-You can even collect your own custom components.
-*/
+ * You can even collect your own custom components.
+ *
+ */
 class LayoutValues {
   constructor({
     spacingSmall = 8,
@@ -482,9 +717,24 @@ class LayoutValues {
     spacingLarge = 64,
     contentMargin = {top: 40, bottom: 10, left: 10, right: 10}
   } = {}) {
+    /**
+     * 8
+     */
     this.spacingSmall = spacingSmall;
+    /**
+     * 32
+     */
     this.spacingMedium = spacingMedium;
+    /**
+     * 64
+     */
     this.spacingLarge = spacingLarge;
+    /**
+     * - top: `40`
+     * - bottom: `10`
+     * - left: `10`
+     * - right: `10`
+     */
     this.contentMargin = new Margin(contentMargin);
   }
 }
@@ -493,8 +743,9 @@ class LayoutValues {
 module.exports.LayoutValues = LayoutValues;
 
 /**
-You can also define strings.
-*/
+ * You can also define strings.
+ *
+ */
 class Strings {
   constructor({
     title = "Diez",
@@ -502,9 +753,21 @@ class Strings {
     helper = "Please Modify the contents of “src/DesignLanguage.ts”.",
     fontFamilies = "'Montserrat-SemiBold', 'Montserrat-Bold', 'Inter-Medium', 'Inter-SemiBold', 'Inter-Regular', 'Inter-Bold', sans-serif"
   } = {}) {
+    /**
+     * Diez
+     */
     this.title = title;
+    /**
+     * Keep your designs in sync with code
+     */
     this.caption = caption;
+    /**
+     * Please Modify the contents of “src/DesignLanguage.ts”.
+     */
     this.helper = helper;
+    /**
+     * 'Montserrat-SemiBold', 'Montserrat-Bold', 'Inter-Medium', 'Inter-SemiBold', 'Inter-Regular', 'Inter-Bold', sans-serif
+     */
     this.fontFamilies = fontFamilies;
   }
 }
@@ -522,20 +785,21 @@ class Shadows {
 module.exports.Shadows = Shadows;
 
 /**
-Note how this component is exported from `index.ts`. Diez compiles these
-exported components for your apps' codebases.
-
-For example:
-   - If you run `yarn start web` or `npm run start web`, Diez will create a Node package called
-     `diez-dashboard-web`. Look for `App.jsx` inside `examples/web` to see
-     how you can use Diez in a web codebase.
-   - If you run `yarn start ios` or `npm run start ios`, Diez will create a CocoaPods dependency
-     called `DiezDashboard`. Look for `ViewController.swift` inside
-     `examples/ios` to see how you can use Diez in an iOS codebase.
-   - If you run `yarn start android` or `npm run start android`, Diez will create an Android library.
-     Look for `MainActivity.kt` inside `examples/android` to see how you can
-     use Diez in an Android codebase.
-*/
+ * Note how this component is exported from `index.ts`. Diez compiles these
+ * exported components for your apps' codebases.
+ * 
+ * For example:
+ *    - If you run `yarn start web` or `npm run start web`, Diez will create a Node package called
+ *      `diez-dashboard-web`. Look for `App.jsx` inside `examples/web` to see
+ *      how you can use Diez in a web codebase.
+ *    - If you run `yarn start ios` or `npm run start ios`, Diez will create a CocoaPods dependency
+ *      called `DiezDashboard`. Look for `ViewController.swift` inside
+ *      `examples/ios` to see how you can use Diez in an iOS codebase.
+ *    - If you run `yarn start android` or `npm run start android`, Diez will create an Android library.
+ *      Look for `MainActivity.kt` inside `examples/android` to see how you can
+ *      use Diez in an Android codebase.
+ *
+ */
 class DesignLanguage {
   constructor({
     palette = {},

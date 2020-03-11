@@ -14,12 +14,12 @@ import Avatar from "../Components/Basic/Avatar";
 const AvatarContainer = styled.div`
   ${tw`flex justify-center items-center w-24 h-24`}
 `;
+
 const Menu = ({ onMenuClick, logout, ...props }) => {
   const isXSmall = useMediaQuery(theme => theme.breakpoints.down("xs"));
   const location = props.location.pathname;
   const open = useSelector(state => state.admin.ui.sidebarOpen);
   const data = useSelector(state => state);
-
   const resources = useSelector(getResources);
   const ref = React.createRef();
   let flat = resources.reduce((total, val) => total.concat(val.name), []);

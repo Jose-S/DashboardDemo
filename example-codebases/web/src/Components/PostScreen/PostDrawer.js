@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import DrawerMaterial from "@material-ui/core/Drawer";
 import styled from "styled-components/macro";
 import tw from "tailwind.macro";
 import PostQuickView from "./PostQuickView";
+import { useSelector } from "react-redux";
+import PostFilter from "./PostFilter";
 
 const Drawer = styled(DrawerMaterial)`
 
@@ -28,17 +30,8 @@ transition: ${props =>
   }
 `;
 
-const PostDrawer = ({ isOpenMatch, selected, handleClose, ...props }) => {
-  const [isOpen, setIsOpen] = useState(isOpenMatch);
-
-  const handleDrawerOpen = () => {
-    setIsOpen(true);
-  };
-
-  const handleDrawerClose = () => {
-    setIsOpen(false);
-    handleClose();
-  };
+const PostDrawer = ({ isOpenMatch, selected, handleClose, handleOpen, ...props }) => {
+  const isOpen = useSelector(state => state.postSiderbarOpen);
 
   return (
     <Drawer
@@ -51,17 +44,18 @@ const PostDrawer = ({ isOpenMatch, selected, handleClose, ...props }) => {
       {isOpen || isOpenMatch ? (
         isOpenMatch ? (
           <div>
-            <button onClick={handleDrawerClose}>close</button>
+            <button onClick={handleClose}>close</button>
             <PostQuickView id={selected} onCancel={handleClose} {...props} />
           </div>
         ) : (
           <div>
-            <button onClick={handleDrawerClose}>close</button>
+            <button onClick={handleClose}>close</button>
+            <PostFilter />
           </div>
         )
       ) : (
         <div>
-          <button onClick={handleDrawerOpen}>open</button>
+          <button onClick={handleOpen}>open</button>
         </div>
       )}
     </Drawer>

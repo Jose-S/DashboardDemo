@@ -16,6 +16,7 @@ import jsonServerProvider from "ra-data-json-server";
 import selectTheme from "./themes/selected-theme";
 import { ThemeProvider, ThemeConsumer } from "styled-components";
 import PostScreen from "./Components/PostScreen/PostResource";
+import postSideBarReducer from "./redux/reducers/postSideBarReducer";
 
 const dataProvider = jsonServerProvider("http://jsonplaceholder.typicode.com");
 
@@ -59,17 +60,18 @@ const App = () => {
             authProvider={authProvider}
             dashboard={Dashboard}
             theme={theme}
+            customReducers={{ postSiderbarOpen: postSideBarReducer }}
           >
             <Resource
-              name="Posts"
+              name="posts"
               icon={PostIcon}
               list={PostScreen}
               //   edit={PostEdit}
               //   create={PostCreate}
               //   show={PostShow}
             />
-            <Resource name="Users" icon={UserIcon} list={UserList} />
-            <Resource name="Comments" icon={ComentIcon} list={ListGuesser} />
+            <Resource name="users" icon={UserIcon} list={UserList} />
+            <Resource name="comments" icon={ComentIcon} list={ListGuesser} />
           </Admin>
         )}
       </ThemeConsumer>

@@ -21,7 +21,7 @@ const breadcrumbNameMap = {
 };
 
 const getName = (to, value) => {
-  if (!isNaN(value) && to.includes(`Posts/${value}`)) {
+  if (!isNaN(value) && to.includes(`posts/${value}`)) {
     return "Quickview";
   } else {
     // Check if route predefined
