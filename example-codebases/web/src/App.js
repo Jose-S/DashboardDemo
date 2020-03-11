@@ -3,6 +3,7 @@ import { Diez, DesignLanguage } from "diez-dashboard";
 import "./App.css";
 import PostIcon from "@material-ui/icons/Book";
 import UserIcon from "@material-ui/icons/Group";
+import ComentIcon from "@material-ui/icons/Comment";
 
 import { Admin, Resource, ListGuesser, Logout } from "react-admin";
 import { PostList, PostEdit, PostCreate, PostShow } from "./Components/posts";
@@ -14,7 +15,7 @@ import jsonServerProvider from "ra-data-json-server";
 
 import selectTheme from "./themes/selected-theme";
 import { ThemeProvider, ThemeConsumer } from "styled-components";
-import PostScreen from "./Components/PostScreen/PostResourceAbstract";
+import PostScreen from "./Components/PostScreen/PostResource";
 
 const dataProvider = jsonServerProvider("http://jsonplaceholder.typicode.com");
 
@@ -60,15 +61,15 @@ const App = () => {
             theme={theme}
           >
             <Resource
-              name="posts"
+              name="Posts"
               icon={PostIcon}
               list={PostScreen}
               //   edit={PostEdit}
               //   create={PostCreate}
               //   show={PostShow}
             />
-            <Resource name="users" icon={UserIcon} list={UserList} />
-            <Resource name="comments" list={ListGuesser} />
+            <Resource name="Users" icon={UserIcon} list={UserList} />
+            <Resource name="Comments" icon={ComentIcon} list={ListGuesser} />
           </Admin>
         )}
       </ThemeConsumer>

@@ -21,7 +21,7 @@ const breadcrumbNameMap = {
 };
 
 const getName = (to, value) => {
-  if (!isNaN(value) && to.includes(`posts/${value}`)) {
+  if (!isNaN(value) && to.includes(`Posts/${value}`)) {
     return "Quickview";
   } else {
     // Check if route predefined
@@ -39,7 +39,6 @@ export default function RouterBreadcrumb(locTest) {
       {({ location }) => {
         // Split Path names into array
         // For Testing
-        console.log(location);
         const loc = locTest.locTest ? locTest.locTest : location;
 
         const pathnames = loc.pathname
@@ -56,8 +55,6 @@ export default function RouterBreadcrumb(locTest) {
               const isLast = index === pathnames.length - 1;
               // Route Location Link
               const to = `/${pathnames.slice(0, index + 1).join("/")}`;
-
-              console.log(to);
 
               if (isLast) {
                 // Does not have a link

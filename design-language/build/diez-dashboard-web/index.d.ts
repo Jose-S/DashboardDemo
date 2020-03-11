@@ -33,78 +33,23 @@ export declare class Color {
   outlineColorStyle: {outlineColor: string};
 }
 
-/**
- * You can reference properties from other components.
- *
- */
 export declare class Palette {
-  /**
-   * `Colors.primaryLigth` ( hsla(0.62, 1, 0.97, 1) )
-   */
   background: Color;
-  /**
-   * `Colors.white` ( hsla(0, 0, 1, 1) )
-   */
   cardBackground: Color;
-  /**
-   * `Colors.gray3` ( hsla(0, 0, 0.51, 1) )
-   */
   tooltipBackground: Color;
-  /**
-   * `Colors.black` ( hsla(0, 0, 0.2, 1) )
-   */
   textPrimary: Color;
-  /**
-   * `Colors.gray3` ( hsla(0, 0, 0.51, 1) )
-   */
   textSecondary: Color;
-  /**
-   * `Colors.gray4` ( hsla(0, 0, 0.74, 1) )
-   */
   textTertiary: Color;
-  /**
-   * `Colors.white` ( hsla(0, 0, 1, 1) )
-   */
   textDarkContrast: Color;
-  /**
-   * `Colors.primary` ( hsla(0.62, 0.83, 0.6, 1) )
-   */
   textHighEmphasis: Color;
-  /**
-   * `Colors.secondary` ( hsla(0.67, 0.54, 0.37, 1) )
-   */
   textLowEmphasis: Color;
-  /**
-   * `Colors.primary` ( hsla(0.62, 0.83, 0.6, 1) )
-   */
   primaryColor: Color;
-  /**
-   * `Colors.primaryLigth` ( hsla(0.62, 1, 0.97, 1) )
-   */
   primaryColorLigth: Color;
-  /**
-   * `Colors.secondary` ( hsla(0.67, 0.54, 0.37, 1) )
-   */
   secondaryColor: Color;
-  /**
-   * `Colors.tertiary` ( hsla(0.62, 0.87, 0.21, 1) )
-   */
   tertiaryColor: Color;
-  /**
-   * `Colors.red` ( hsla(0, 0.79, 0.63, 1) )
-   */
   redColor: Color;
-  /**
-   * `Colors.orange` ( hsla(0.08, 0.87, 0.62, 1) )
-   */
   orangeColor: Color;
-  /**
-   * `Colors.yellow` ( hsla(0.13, 0.86, 0.62, 1) )
-   */
   yellowColor: Color;
-  /**
-   * `Colors.green2` ( hsla(0.4, 0.63, 0.42, 1) )
-   */
   greenColor: Color;
 }
 
@@ -115,40 +60,11 @@ export declare class File {
   url: string;
 }
 
-/**
- * A representation of a font resource, with a reference to a [[File]] containing a TTF or OTF font file.
- *
- */
 export declare class Font {
-  /**
-   * Font data.
-   *
-   * assets/Design.figma.contents/fonts/Montserrat-SemiBold.ttf
-   */
   file: File;
-  /**
-   * Font data.
-   *
-   * Montserrat-SemiBold
-   */
   name: string;
-  /**
-   * Font data.
-   *
-   * [sans-serif]
-   */
   fallbacks: string[];
-  /**
-   * Font data.
-   *
-   * 400
-   */
   weight: number;
-  /**
-   * Font data.
-   *
-   * normal
-   */
   style: string;
 }
 
@@ -185,263 +101,47 @@ declare global {
 }
 
 export declare class DesignTypography {
-  /**
-   * - font: `Montserrat-SemiBold, 400, normal`
-   * - fontSize: `48`
-   * - color: `hsla(0, 0, 0.2, 1)`
-   * - iosTextStyle: `body`
-   * - shouldScale: `false`
-   * - lineHeight: `56.25`
-   * - letterSpacing: `0`
-   * - alignment: `natural`
-   * - decoration: `[]`
-   */
   fontStyle10: Typograph;
-  /**
-   * - font: `Montserrat-Bold, 400, normal`
-   * - fontSize: `36`
-   * - color: `hsla(0, 0, 0.2, 1)`
-   * - iosTextStyle: `body`
-   * - shouldScale: `false`
-   * - lineHeight: `20`
-   * - letterSpacing: `0.25`
-   * - alignment: `natural`
-   * - decoration: `[]`
-   */
   fontStyle9: Typograph;
-  /**
-   * - font: `Inter-Medium, 400, normal`
-   * - fontSize: `32`
-   * - color: `hsla(0, 0, 0.2, 1)`
-   * - iosTextStyle: `body`
-   * - shouldScale: `false`
-   * - lineHeight: `20`
-   * - letterSpacing: `0.25`
-   * - alignment: `natural`
-   * - decoration: `[]`
-   */
   fontStyle8: Typograph;
-  /**
-   * - font: `Inter-SemiBold, 400, normal`
-   * - fontSize: `24`
-   * - color: `hsla(0, 0, 0.2, 1)`
-   * - iosTextStyle: `body`
-   * - shouldScale: `false`
-   * - lineHeight: `36`
-   * - letterSpacing: `0.25`
-   * - alignment: `natural`
-   * - decoration: `[]`
-   */
   fontStyle7: Typograph;
-  /**
-   * - font: `Inter-Regular, 400, normal`
-   * - fontSize: `16`
-   * - color: `hsla(0, 0, 0.2, 1)`
-   * - iosTextStyle: `body`
-   * - shouldScale: `false`
-   * - lineHeight: `20`
-   * - letterSpacing: `0.25`
-   * - alignment: `natural`
-   * - decoration: `[]`
-   */
   fontStyle4: Typograph;
-  /**
-   * - font: `Inter-SemiBold, 400, normal`
-   * - fontSize: `14`
-   * - color: `hsla(0, 0, 0.2, 1)`
-   * - iosTextStyle: `body`
-   * - shouldScale: `false`
-   * - lineHeight: `16.40625`
-   * - letterSpacing: `0.315`
-   * - alignment: `natural`
-   * - decoration: `[]`
-   */
   fontStyle3: Typograph;
-  /**
-   * - font: `Inter-Medium, 400, normal`
-   * - fontSize: `12`
-   * - color: `hsla(0, 0, 0.2, 1)`
-   * - iosTextStyle: `body`
-   * - shouldScale: `false`
-   * - lineHeight: `16`
-   * - letterSpacing: `0.4000000059604645`
-   * - alignment: `natural`
-   * - decoration: `[]`
-   */
   fontStyle2: Typograph;
-  /**
-   * - font: `Inter-Regular, 400, normal`
-   * - fontSize: `10`
-   * - color: `hsla(0, 0, 0.2, 1)`
-   * - iosTextStyle: `body`
-   * - shouldScale: `false`
-   * - lineHeight: `16`
-   * - letterSpacing: `1`
-   * - alignment: `natural`
-   * - decoration: `[]`
-   */
   fontStyle1: Typograph;
-  /**
-   * - font: `Montserrat-SemiBold, 400, normal`
-   * - fontSize: `96`
-   * - color: `hsla(0, 0, 0.2, 1)`
-   * - iosTextStyle: `body`
-   * - shouldScale: `false`
-   * - lineHeight: `112.5`
-   * - letterSpacing: `-1.5`
-   * - alignment: `natural`
-   * - decoration: `[]`
-   */
   fontStyle12: Typograph;
-  /**
-   * - font: `Montserrat-Bold, 400, normal`
-   * - fontSize: `64`
-   * - color: `hsla(0, 0, 0.2, 1)`
-   * - iosTextStyle: `body`
-   * - shouldScale: `false`
-   * - lineHeight: `75`
-   * - letterSpacing: `0`
-   * - alignment: `natural`
-   * - decoration: `[]`
-   */
   fontStyle11: Typograph;
-  /**
-   * - font: `Inter-Medium, 400, normal`
-   * - fontSize: `20`
-   * - color: `hsla(0, 0, 0.2, 1)`
-   * - iosTextStyle: `body`
-   * - shouldScale: `false`
-   * - lineHeight: `20`
-   * - letterSpacing: `0.5`
-   * - alignment: `natural`
-   * - decoration: `[]`
-   */
   fontStyle6: Typograph;
-  /**
-   * - font: `Inter-Bold, 400, normal`
-   * - fontSize: `18`
-   * - color: `hsla(0, 0, 0.2, 1)`
-   * - iosTextStyle: `body`
-   * - shouldScale: `false`
-   * - lineHeight: `20`
-   * - letterSpacing: `0.5`
-   * - alignment: `natural`
-   * - decoration: `[]`
-   */
   fontStyle5: Typograph;
 }
 
-/**
- * Typographs encapsulate type styles with support for a specific font, font size,
- * and color. More typograph properties are coming soon.
- *
- */
 export declare class Images {
 }
 
-/**
- * Here we create a custom reusable component for describing layout margins.
- *
- */
 export declare class Margin {
-  /**
-   * Defining the interface of your component's data enables you to instantiate your own
-   * reusable components.
-   *
-   * 40
-   */
   top: number;
-  /**
-   * Defining the interface of your component's data enables you to instantiate your own
-   * reusable components.
-   *
-   * 10
-   */
   bottom: number;
-  /**
-   * Defining the interface of your component's data enables you to instantiate your own
-   * reusable components.
-   *
-   * 10
-   */
   left: number;
-  /**
-   * Defining the interface of your component's data enables you to instantiate your own
-   * reusable components.
-   *
-   * 10
-   */
   right: number;
 }
 
-/**
- * You can even collect your own custom components.
- *
- */
 export declare class LayoutValues {
-  /**
-   * 8
-   */
   spacingSmall: number;
-  /**
-   * 32
-   */
   spacingMedium: number;
-  /**
-   * 64
-   */
   spacingLarge: number;
-  /**
-   * - top: `40`
-   * - bottom: `10`
-   * - left: `10`
-   * - right: `10`
-   */
   contentMargin: Margin;
 }
 
-/**
- * You can also define strings.
- *
- */
 export declare class Strings {
-  /**
-   * Diez
-   */
   title: string;
-  /**
-   * Keep your designs in sync with code
-   */
   caption: string;
-  /**
-   * Please Modify the contents of “src/DesignLanguage.ts”.
-   */
   helper: string;
-  /**
-   * 'Montserrat-SemiBold', 'Montserrat-Bold', 'Inter-Medium', 'Inter-SemiBold', 'Inter-Regular', 'Inter-Bold', sans-serif
-   */
   fontFamilies: string;
 }
 
 export declare class Shadows {
 }
 
-/**
- * Note how this component is exported from `index.ts`. Diez compiles these
- * exported components for your apps' codebases.
- * 
- * For example:
- *    - If you run `yarn start web` or `npm run start web`, Diez will create a Node package called
- *      `diez-dashboard-web`. Look for `App.jsx` inside `examples/web` to see
- *      how you can use Diez in a web codebase.
- *    - If you run `yarn start ios` or `npm run start ios`, Diez will create a CocoaPods dependency
- *      called `DiezDashboard`. Look for `ViewController.swift` inside
- *      `examples/ios` to see how you can use Diez in an iOS codebase.
- *    - If you run `yarn start android` or `npm run start android`, Diez will create an Android library.
- *      Look for `MainActivity.kt` inside `examples/android` to see how you can
- *      use Diez in an Android codebase.
- *
- */
 export declare class DesignLanguage extends RootComponent {
   palette: Palette;
   typography: DesignTypography;

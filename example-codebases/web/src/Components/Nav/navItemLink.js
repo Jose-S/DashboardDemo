@@ -14,11 +14,6 @@ const activeClassname = "NavItemLink-Active" + btoa(Math.random());
 
 // Styled Components
 
-const Signifier = styled(Box)`
-  height: inherit;
-  ${tw`w-1 bg-primary flex-grow-0`}
-`;
-
 const Item = styled(({ className, ...props }) => (
   <MenuItemMaterial {...props} classes={{ root: className }} />
 ))`
@@ -91,7 +86,7 @@ const NavItemLink = forwardRef(
 // Props required by component
 NavItemLink.propTypes = {
   className: PropTypes.string,
-  iconSrc: PropTypes.element,
+  iconSrc: PropTypes.object,
   onClick: PropTypes.func,
   title: PropTypes.node,
   staticContext: PropTypes.object, // Left in case if we use static routes

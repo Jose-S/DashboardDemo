@@ -19,7 +19,7 @@ const Menu = ({ onMenuClick, logout, ...props }) => {
   const location = props.location.pathname;
   const open = useSelector(state => state.admin.ui.sidebarOpen);
   const data = useSelector(state => state);
-  console.log("STORE", data);
+
   const resources = useSelector(getResources);
   const ref = React.createRef();
   let flat = resources.reduce((total, val) => total.concat(val.name), []);

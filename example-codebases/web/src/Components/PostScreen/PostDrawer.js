@@ -1,39 +1,68 @@
-import React from "react";
+import React, { useState } from "react";
 
 import DrawerMaterial from "@material-ui/core/Drawer";
-
-import { Edit, ReferenceInput, SelectInput, SimpleForm, TextInput } from "react-admin";
 import styled from "styled-components/macro";
 import tw from "tailwind.macro";
-
-const PostEdit = props => (
-  <Edit title={"QickView"} {...props}>
-    <SimpleForm>
-      <TextInput disabled source="id" />
-      <ReferenceInput label="User" source="userId" reference="users">
-        <SelectInput optionText="name" />
-      </ReferenceInput>
-      <TextInput source="title" />
-      <TextInput multiline source="body" />
-    </SimpleForm>
-  </Edit>
-);
+import PostQuickView from "./PostQuickView";
 
 const Drawer = styled(DrawerMaterial)`
+
+transition: ${props =>
+  props.open
+    ? props.theme.transitions.create("width", {
+        easing: props.theme.transitions.easing.sharp,
+        duration: props.theme.transitions.duration.enteringScreen
+      })
+    : props.theme.transitions.create("width", {
+        easing: props.theme.transitions.easing.sharp,
+        duration: props.theme.transitions.duration.leavingScreen
+      })};
+
   &.MuiDrawer-root {
-    width: 72px;
+    ${props => (props.open ? tw`w-99` : tw`w-18`)}
+  }
+
+  .MuiDrawer-paper {
+    width: inherit;
+    /* ${props => (props.open ? tw`w-28` : tw`w-18`)} */
   }
 `;
 
-const PostDrawer = props => {
-  console.log("PROPS DRAWER", props.isOpen);
+const PostDrawer = ({ isOpenMatch, selected, handleClose, ...props }) => {
+  const [isOpen, setIsOpen] = useState(isOpenMatch);
+
+  const handleDrawerOpen = () => {
+    setIsOpen(true);
+  };
+
+  const handleDrawerClose = () => {
+    setIsOpen(false);
+    handleClose();
+  };
+
   return (
-    <Drawer variant="permanent" open={props.isOpen} anchor="right" onClose={props.onClose}>
+    <Drawer
+      variant="permanent"
+      open={isOpen || isOpenMatch}
+      anchor="right"
+      onClose={handleClose}
+    >
       {/* Avoid route errors*/}
-      {props.isOpen ? (
-        <PostEdit id={1} onCancel={props.onClose} {...props} />
+      {isOpen || isOpenMatch ? (
+        isOpenMatch ? (
+          <div>
+            <button onClick={handleDrawerClose}>close</button>
+            <PostQuickView id={selected} onCancel={handleClose} {...props} />
+          </div>
+        ) : (
+          <div>
+            <button onClick={handleDrawerClose}>close</button>
+          </div>
+        )
       ) : (
-        <div style={{ width: "72px" }} />
+        <div>
+          <button onClick={handleDrawerOpen}>open</button>
+        </div>
       )}
     </Drawer>
   );
